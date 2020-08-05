@@ -1,3 +1,5 @@
+# [Whimsical Engineering Architecture Document](https://whimsical.com/GEHTjkUnuZu3WReGtmMU6)
+
 # Basic SPA
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/5e37932c610a83213715/maintainability)](https://codeclimate.com/github/Lambda-School-Labs/labs-spa-starter/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/5e37932c610a83213715/test_coverage)](https://codeclimate.com/github/Lambda-School-Labs/labs-spa-starter/test_coverage)
