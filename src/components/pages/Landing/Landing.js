@@ -8,7 +8,7 @@ const Landing = () => {
   const match = useHistory();
 
   useEffect(() => {
-    if (localStorage.getItem('consent') === true) {
+    if (JSON.parse(localStorage.getItem('consent')) === true) {
       match.push('/home');
     }
   }, []);
