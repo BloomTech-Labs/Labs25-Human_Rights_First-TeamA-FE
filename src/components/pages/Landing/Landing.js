@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'antd/dist/antd.css';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
 import { Card } from 'antd';
 import { Button } from 'antd';
 
 const Landing = () => {
+  const match = useHistory();
+
+  useEffect(() => {
+    if (localStorage.getItem('consent') === true) {
+      match.push('/home');
+    }
+  }, []);
+
+  const accept = () => {
+    localStorage.setItem('consent', JSON.stringify(true));
+    match.push('/home');
+  };
   return (
     <>
       <Card
@@ -17,9 +29,11 @@ const Landing = () => {
         </a>
         <></>
         <></>
-        <Link to="/home">
-          <Button type="primary">Let me see!</Button>
-        </Link>
+        {/* <Link to="/home"> */}
+        <Button type="primary" onClick={accept}>
+          Let me see!
+        </Button>
+        {/* </Link> */}
       </Card>
     </>
   );
