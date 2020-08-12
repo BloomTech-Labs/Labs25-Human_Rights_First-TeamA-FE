@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Landing } from './components/pages/Landing/index';
+import Map from './components/pages/Incidents/Map/Map';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router';
 import 'antd/dist/antd.less';
@@ -16,8 +17,13 @@ ReactDOM.render(
 
 function App() {
   return (
-    <Route exact path="/">
-      <Landing />
-    </Route>
+    <>
+      <Route exact path="/">
+        <Landing />
+      </Route>
+      <Route path="/home">
+        <Map />
+      </Route>
+    </>
   );
 }
