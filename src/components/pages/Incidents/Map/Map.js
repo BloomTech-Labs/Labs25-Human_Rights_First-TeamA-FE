@@ -7,10 +7,17 @@ import { axiosBase } from '../../../../utils/axiosBase';
 const Map = props => {
   const [incidents, setIncidents] = useState([]);
   const center = {
-    lat: 59.95,
-    lng: 30.33,
+    lat: 38,
+    lng: 267,
   };
-  const zoom = 11;
+  console.log(window.screen.width);
+  let zoom = 3;
+  if (window.screen.width >= 768) {
+    zoom = 4;
+  }
+  if (window.screen.width >= 1200) {
+    zoom = 5;
+  }
 
   useEffect(() => {
     axiosBase()
@@ -23,6 +30,16 @@ const Map = props => {
         console.log(err);
       });
   }, []);
+  const createMarkers = incidents.map(incident => {
+    return (
+      <Marker
+        key={incident.latitude + incident.longitude}
+        lat={incident.latitude}
+        lng={incident.longitude}
+        text="Incident"
+      />
+    );
+  });
   console.log(incidents, 'STATE');
   return (
     <div style={{ height: '100vh', width: '100%' }}>
@@ -31,7 +48,7 @@ const Map = props => {
         defaultCenter={center}
         defaultZoom={zoom}
       >
-        <Marker lat={59.955413} lng={30.337844} text="My Marker" />
+        {createMarkers}
       </GoogleMapReact>
     </div>
   );
