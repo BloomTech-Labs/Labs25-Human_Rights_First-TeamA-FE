@@ -5,8 +5,8 @@ const Marker = props => {
     <div
       className="marker-container"
       style={{
-        height: '1vh',
-        width: '2vw',
+        height: '5px',
+        width: '5px',
         backgroundColor: 'red',
         borderRadius: '20px',
       }}
