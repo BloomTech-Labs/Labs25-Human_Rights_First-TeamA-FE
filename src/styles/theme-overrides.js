@@ -5,7 +5,7 @@ module.exports = {
   '@warning-color': '#faad14',
   '@error-color': '#f5222d',
   '@font-size-base': '14px',
-  '@heading-color': 'rgba(0, 0, 0, 0.85)',
+  '@heading-color': 'white',
   '@text-color': 'rgba(0, 0, 0, 0.65)',
   '@text-color-secondary': 'rgba(0, 0, 0, 0.45)',
   '@disabled-color': 'rgba(0, 0, 0, 0.25)',

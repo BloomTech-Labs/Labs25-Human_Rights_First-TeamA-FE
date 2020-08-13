@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
 
+import { v4 as uuidv4, v4 } from 'uuid';
+
 import { axiosBase } from '../../../../utils/axiosBase';
 
 const Map = props => {
@@ -31,7 +33,7 @@ const Map = props => {
   const createMarkers = incidents.map(incident => {
     return (
       <Marker
-        key={incident.latitude + incident.longitude}
+        key={uuidv4()}
         lat={incident.latitude}
         lng={incident.longitude}
         text="Incident"

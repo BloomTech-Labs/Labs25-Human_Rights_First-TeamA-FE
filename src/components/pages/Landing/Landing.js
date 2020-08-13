@@ -18,24 +18,21 @@ const Landing = () => {
     match.push('/home');
   };
   return (
-    <>
+    <div className="consent-container">
       <Card
-        title="Requires your consent"
-        style={{ width: 300 }}
+        title={`This site contains sensitive material`}
         className="consent-card"
       >
-        <a href="https://www.humanrightsfirst.org/">
-          <Button type="primary">Take me away</Button>
-        </a>
-        <></>
-        <></>
-        {/* <Link to="/home"> */}
-        <Button type="primary" onClick={accept}>
-          Let me see!
-        </Button>
-        {/* </Link> */}
+        <div className="button-container">
+          <a href="https://www.humanrightsfirst.org/">
+            <Button type="primary">Abandon</Button>
+          </a>
+          <Button type="primary" onClick={accept}>
+            Continue
+          </Button>
+        </div>
       </Card>
-    </>
+    </div>
   );
 };
 export default Landing;
