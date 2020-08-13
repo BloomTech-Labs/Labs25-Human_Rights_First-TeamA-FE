@@ -40,6 +40,7 @@ const Map = props => {
           lat={incident.latitude}
           lng={incident.longitude}
           text="Incident"
+          incident={incident}
         />
       );
     });

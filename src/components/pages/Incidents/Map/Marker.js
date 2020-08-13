@@ -11,20 +11,48 @@ const Marker = props => {
 
   const handleClick = visible => (setHover(false), setClick(visible));
 
+  const linkStore = () => {
+    if (props.incident.evidence.length > 0) {
+      return props.incident.evidence.map(link => (
+        <div
+          style={{
+            textOverflow: 'ellipsis',
+            width: '500px',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+          }}
+        >
+          {' '}
+          <a href={link}>{link} </a>
+        </div>
+      ));
+    }
+  };
+  let content = linkStore();
+  const evidence = <h3>Evidence:</h3>;
+  content.unshift(evidence);
+
   return (
     <>
       <Popover
         style={{ width: '500px' }}
-        content="Hello"
-        title="Hi There"
+        content={content}
+        title={`${props.incident.title} ${props.incident.date}`}
         trigger="hover"
         visible={hover}
         onVisibleChange={handleHover}
       >
         <Popover
           style={{ width: '500px' }}
-          content="Hello"
-          title="Hi There"
+          content={
+            <div>
+              {content}
+              <a onClick={handleHide} className="close">
+                Close
+              </a>
+            </div>
+          }
+          title={`${props.incident.title} ${props.incident.date}`}
           trigger="click"
           visible={click}
           onVisibleChange={handleClick}
@@ -33,7 +61,6 @@ const Marker = props => {
             className="marker"
             style={{ width: '25px', height: '25px', backgroundColor: 'red' }}
           ></div>
-          <a onClick={handleHide}>Close</a>
         </Popover>
       </Popover>
     </>
