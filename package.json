@@ -9,12 +9,15 @@
     "antd": "^4.4.3",
     "axios": "^0.19.2",
     "craco-less": "^1.17.0",
+    "google-map-react": "^2.0.8",
+    "less": "^3.12.2",
     "plotly.js": "^1.54.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-plotly.js": "^2.4.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "uuid": "^8.3.0"
   },
   "scripts": {
     "start": "craco --max_old_space_size=4096 start",
