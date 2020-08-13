@@ -30,16 +30,20 @@ const Map = props => {
         console.log(err);
       });
   }, []);
-  const createMarkers = incidents.map(incident => {
-    return (
-      <Marker
-        key={uuidv4()}
-        lat={incident.latitude}
-        lng={incident.longitude}
-        text="Incident"
-      />
-    );
-  });
+  let createMarkers;
+  console.log(incidents);
+  if (incidents.length > 0) {
+    createMarkers = incidents.map(incident => {
+      return (
+        <Marker
+          key={uuidv4()}
+          lat={incident.latitude}
+          lng={incident.longitude}
+          text="Incident"
+        />
+      );
+    });
+  }
   return (
     <div style={{ height: '100vh', width: '100%' }}>
       <GoogleMapReact
