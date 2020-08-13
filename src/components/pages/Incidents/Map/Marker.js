@@ -5,11 +5,20 @@ const Marker = props => {
   const [click, setClick] = useState(false);
   const [hover, setHover] = useState(false);
 
-  const handleHide = () => (setClick(false), setHover(false));
+  const handleHide = () => {
+    setClick(false);
+    setHover(false);
+  };
 
-  const handleHover = visible => (setHover(visible), setClick(false));
+  const handleHover = visible => {
+    setHover(visible);
+    setClick(false);
+  };
 
-  const handleClick = visible => (setHover(false), setClick(visible));
+  const handleClick = visible => {
+    setHover(false);
+    setClick(visible);
+  };
 
   const linkStore = () => {
     if (props.incident.evidence.length > 0) {
