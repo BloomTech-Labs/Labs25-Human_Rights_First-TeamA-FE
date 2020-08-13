@@ -1,11 +1,12 @@
+// #ec3944
 module.exports = {
-  '@primary-color': '#ec3944',
+  '@primary-color': '#373737',
   '@link-color': ' #ec3944',
   '@success-color': '#52c41a',
   '@warning-color': '#faad14',
   '@error-color': '#f5222d',
   '@font-size-base': '14px',
-  '@heading-color': 'rgba(0, 0, 0, 0.85)',
+  '@heading-color': 'white',
   '@text-color': 'rgba(0, 0, 0, 0.65)',
   '@text-color-secondary': 'rgba(0, 0, 0, 0.45)',
   '@disabled-color': 'rgba(0, 0, 0, 0.25)',
