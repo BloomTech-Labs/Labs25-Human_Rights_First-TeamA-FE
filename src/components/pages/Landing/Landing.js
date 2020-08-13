@@ -20,7 +20,7 @@ const Landing = () => {
   return (
     <div className="consent-container">
       <Card
-        title={`This site contains sensitive material`}
+        title={`THIS SITE CONTAINS IMAGES OF GRAPHIC VIOLENCE`}
         className="consent-card"
       >
         <div className="button-container">

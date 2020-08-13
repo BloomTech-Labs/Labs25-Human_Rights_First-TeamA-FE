@@ -138,7 +138,8 @@ table {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 90%;
+  width: 95%;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .consent-container .consent-card {
@@ -155,9 +156,18 @@ table {
     width: 30%;
   }
 }
-.consent-container .consent-card .ant-card-head-title {
+.consent-container .consent-card .ant-card-head {
+  padding: 0;
+}
+.consent-container .consent-card .ant-card-head .ant-card-head-title {
   overflow: visible;
   text-align: center;
+  font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+  .consent-container .consent-card .ant-card-head .ant-card-head-title {
+    font-size: 1rem;
+  }
 }
 .consent-container .consent-card .button-container {
   display: flex;
