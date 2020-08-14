@@ -39,7 +39,11 @@ const Marker = props => {
     <>
       <Popover
         content={content}
-        title={`${props.incident.title} ${props.incident.date}`}
+        title={
+          <div className="title-container">
+            <div>{props.incident.title}</div> <div>{props.incident.date}</div>
+          </div>
+        }
         trigger="hover"
         visible={hover}
         onVisibleChange={handleHover}
@@ -55,7 +59,11 @@ const Marker = props => {
               </div>
             </div>
           }
-          title={`${props.incident.title} ${props.incident.date}`}
+          title={
+            <div className="title-container">
+              <div>{props.incident.title}</div> <div>{props.incident.date}</div>
+            </div>
+          }
           trigger="click"
           visible={click}
           onVisibleChange={handleClick}

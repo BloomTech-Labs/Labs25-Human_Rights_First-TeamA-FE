@@ -179,6 +179,12 @@ table {
   height: 25px;
   width: 25px;
 }
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 .evidence {
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -211,4 +217,5 @@ table {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 2%;
 }
