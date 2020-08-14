@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Popover } from 'antd';
+const baton = require('../../../../resources/images/baton.png');
 
 const Marker = props => {
   const [click, setClick] = useState(false);
@@ -23,14 +24,7 @@ const Marker = props => {
   const linkStore = () => {
     if (props.incident.evidence.length > 0) {
       return props.incident.evidence.map(link => (
-        <div
-          style={{
-            textOverflow: 'ellipsis',
-            width: '500px',
-            whiteSpace: 'nowrap',
-            overflow: 'hidden',
-          }}
-        >
+        <div className="evidence">
           {' '}
           <a href={link}>{link} </a>
         </div>
@@ -44,7 +38,6 @@ const Marker = props => {
   return (
     <>
       <Popover
-        style={{ width: '500px' }}
         content={content}
         title={`${props.incident.title} ${props.incident.date}`}
         trigger="hover"
@@ -52,13 +45,14 @@ const Marker = props => {
         onVisibleChange={handleHover}
       >
         <Popover
-          style={{ width: '500px' }}
           content={
             <div>
               {content}
-              <a onClick={handleHide} className="close">
-                Close
-              </a>
+              <div className="close-container">
+                <a onClick={handleHide} className="close">
+                  Close
+                </a>
+              </div>
             </div>
           }
           title={`${props.incident.title} ${props.incident.date}`}
@@ -66,10 +60,8 @@ const Marker = props => {
           visible={click}
           onVisibleChange={handleClick}
         >
-          <div
-            className="marker"
-            style={{ width: '25px', height: '25px', backgroundColor: 'red' }}
-          ></div>
+          {/* <divclassName="marker"></div> */}
+          <img src={baton} alt="baton" className="marker"></img>
         </Popover>
       </Popover>
     </>

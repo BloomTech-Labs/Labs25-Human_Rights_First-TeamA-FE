@@ -176,8 +176,39 @@ table {
   align-items: center;
 }
 .marker {
-  height: 5px;
-  width: 5px;
-  background-color: red;
-  border-radius: 20px;
+  height: 25px;
+  width: 25px;
+}
+.evidence {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ant-popover {
+  width: 70%;
+}
+@media (min-width: 768px) {
+  .ant-popover {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .ant-popover {
+    width: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .ant-popover {
+    width: 30%;
+  }
+}
+.ant-popover .ant-popover-title {
+  text-align: center;
+}
+.close-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
