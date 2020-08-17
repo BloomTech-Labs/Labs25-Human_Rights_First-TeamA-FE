@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
+import ViewChange from '../../ViewChange/viewchange';
 
 import { v4 as uuidv4, v4 } from 'uuid';
 
@@ -46,13 +47,15 @@ const Map = props => {
     });
   }
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
+    <div style={{ height: '100vh', width: '100%', position: 'relative' }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
         defaultCenter={center}
         defaultZoom={zoom}
       >
         {createMarkers}
+
+        <ViewChange id="viewchangeparent" />
       </GoogleMapReact>
     </div>
   );
