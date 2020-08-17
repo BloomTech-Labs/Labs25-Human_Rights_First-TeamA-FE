@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
+import SearchBar from './SearchBar';
 
 import { v4 as uuidv4, v4 } from 'uuid';
 
@@ -52,6 +53,9 @@ const Map = props => {
         defaultCenter={center}
         defaultZoom={zoom}
       >
+        <div style={{ position: 'fixed', top: '6px', left: '3px' }}>
+          <SearchBar />
+        </div>
         {createMarkers}
       </GoogleMapReact>
     </div>
