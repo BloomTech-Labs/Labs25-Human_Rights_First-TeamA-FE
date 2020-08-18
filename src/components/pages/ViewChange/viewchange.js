@@ -31,8 +31,8 @@ const ViewChange = props => {
             style={{
               backgroundColor: 'lightgrey',
               position: 'fixed',
-              left: '2px',
-              bottom: '2px',
+              left: '2%',
+              bottom: '5%',
             }}
           >
             Choose Visual

@@ -54,9 +54,9 @@ const Map = props => {
         defaultZoom={zoom}
       >
         {createMarkers}
-
-        <ViewChange id="viewchangeparent" />
       </GoogleMapReact>
+
+      <ViewChange />
     </div>
   );
 };
