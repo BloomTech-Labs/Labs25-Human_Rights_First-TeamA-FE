@@ -4,7 +4,7 @@
 
 🚫 Each student has a required minimum number of meaningful PRs each week per the rubric. Contributing to docs does NOT count as a PR to meet your weekly requirements.
 
-# 1️⃣ Title of project goes here
+# 1️⃣ Human Rights First - Police Incident Report
 
 1️⃣ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste URL here).
 
@@ -12,11 +12,11 @@
 
 🚫Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
 
-|                                                      [Student 1](https://github.com/)                                                       |                                                       [Student 2](https://github.com/)                                                        |                                                      [Student 3](https://github.com/)                                                       |                                                       [Student 4](https://github.com/)                                                        |                                                      [Student 5](https://github.com/)                                                       |
+|                                                      [Cole Wilkison](https://github.com/cwilkison)                                                       |                                                       [Gordon Caister](https://github.com/GordonCaister)                                                        |                                                      [Andrew Hoffman](https://github.com/ashoffman)                                                       |                                                       [Nathan Howland](https://github.com/NateyLB)                                                        |                                                      [Phil Fives](https://github.com/ph5500)                                                       |
 | :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: |
 | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-female.png" width = "200" />](https://github.com/) | [<img src="https://www.dalesjewelers.com/wp-content/uploads/2018/10/placeholder-silhouette-male.png" width = "200" />](https://github.com/) |
-|                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/)                                |                            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/honda0306)                             |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/Mister-Corn)                           |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NandoTheessen)                           |                           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/wvandolah)                            |
-|                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/)                |
+|                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/cwilkison)                                |                            [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/gordoncaister)                             |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ashoffman)                           |                          [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NateyLB)                           |                           [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ph5500)                            |
+|                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/cole-wilkison/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gordoncaister/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/ashoffmann90/)                |                 [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/nathan-howland-3611241a6/)                 |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/n/phil-fives/)                |
 
 <br>
 <br>
@@ -33,84 +33,76 @@
 
 ## Project Overview
 
-1️⃣ [Trello Board](🚫add link to trello board here)
+1️⃣ [Trello Board](https://trello.com/b/f5IBtPhV/labs25hrfbrannan)
 
-1️⃣ [Product Canvas](🚫add link to product canvas here)
+1️⃣ [Product Canvas](https://whimsical.com/4Gg7cNjtFfmcAXKDpRu8oJ)
 
-1️⃣ [UX Design files](🚫add link to design files here) - 🚫 delete if not applicable
+1️⃣ [UX Design files](https://www.figma.com/file/0WO6A6jQw3o00KSqcUv1Vm/PoliceForceApp?node-id=0%3A1) - 🚫 delete if not applicable
 
-🚫 Replace lorem ipsum with a description of your project
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Single page application that maps police brutality based on scraping data from Twitter and Reddit.  It includes a timeline view, visual
+map and feed page.  Intended for journalists, activists and lawyers.
 
 ### 4️⃣ Key Features
 
-- feature one
-- feature two
-- feature three
-- feature four
-- feature five
+- Interactive Map
+- Timeline
+- Feed page
+- Search Function
 
 ## 1️⃣ Tech Stack
 
 ### Front end built using:
 
-#### _Front end framework goes here_
+#### React
 
 🚫 Why did you choose this framework?
 
-- point one
-- point two
-- point three
-- point four
+- React is highly customizable with 3rd party wrappers and libraries
+- React handles single page applications extremely well and can be expanded to multipage applications easily
+- React puts most of the rendering on the client, thus reducing the amount of server power required
 
 🚫List the rest of the front end features and libraries in the same format as the framework above.
+- Ant Design
+- React-Google-Map
+- craco-less
 
-#### Front end deployed to `🚫insert service here`
+#### Front end deployed to AWS Amplify
 
-#### [Back end](🚫link to back end repo here) built using:
+#### [Back end] https://github.com/Lambda-School-Labs/Labs25-Human_Rights_First-TeamA-BE built using:
 
-#### 🚫 back end framework goes here
+#### Node
 
-- point one
-- point two
-- point three
+- It is a built in requirement from Engineering Standards
+- It has better efficiency and developer productivity
+- It is easily scalable
 
 🚫 List the rest of the back end end features and libraries in the same format as the framework above
 
+- Express
+- Axios
+- Knex
+- Postgres
+- CORS
+
+
 # APIs
 
-## 2️⃣ Authentication API here
+## 2️⃣ Okta Authentication
 
-🚫Replace text below with a description of the API
+The Okta Authentication API provides operations to authenticate users, perform multifactor enrollment and verification, recover forgotten passwords, and unlock accounts. Primary authentication allows you to verify username and password credentials for a user.
 
-Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
+## 3️⃣ Google Maps API
 
-## 2️⃣ Payment API here
+Allows building of customized, agile experiences that bring the real world to our users with static and dynamic maps, Street View imagery, and 360° views.
 
-🚫Replace text below with a description of the API
+## 3️⃣ Back-End API
 
-This is the way you take out your flustrations. Get away from those little Christmas tree things we used to make in school. Isn't it fantastic that you can change your mind and create all these happy things? Everything's not great in life, but we can still find beauty in it.
+Allows for access of locations of police brutality and details entailing these incidents.
 
-## 3️⃣ Misc API here
+## 3️⃣ Data Science API
 
-🚫Replace text below with a description of the API
+Data Science scrapes data from Twitter and Reddit which compiles and cleans that information for the Web Developers.
 
-You can do anything your heart can imagine. In life you need colors. This is where you take out all your hostilities and frustrations. It's better than kicking the puppy dog around and all that so. I'm sort of a softy, I couldn't shoot Bambi except with a camera. Trees get lonely too, so we'll give him a little friend. We'll lay all these little funky little things in there.
-
-## 3️⃣ Misc API here
-
-🚫Replace text below with a description of the API
-
-When you do it your way you can go anywhere you choose. Let your heart take you to wherever you want to be. If I paint something, I don't want to have to explain what it is. A tree needs to be your friend if you're going to paint him. That's a son of a gun of a cloud. Even the worst thing we can do here is good.
-
-## 3️⃣ Misc API here
-
-🚫Replace text below with a description of the API
-
-Volunteering your time; it pays you and your whole community fantastic dividends. Maybe there's a happy little waterfall happening over here. You can spend all day playing with mountains. We don't have to be committed. We are just playing here. You have freedom here. The only guide is your heart. It's cold, but it's beautiful.
 
 # 3️⃣ Environment Variables
 
@@ -118,16 +110,16 @@ In order for the app to function correctly, the user must set up their own envir
 
 🚫These are just examples, replace them with the specifics for your app
 
-    *  REACT_APP_apiKey - this is your Google API key, which can be generated in the Google Cloud Console
-    *  REACT_APP_authDomain - when you set up your Firebase project, this information will be in the dashboard
-    *  REACT_APP_databaseURL - in the Firebase dashboard
-    *  REACT_APP_projectID - in the Firebase dashboard
-    *  REACT_APP_storageBucket - in the Firebase dashboard
-    *  REACT_APP_messagingSenderId - in the Firebase dashboard
-    *  REACT_APP_stripe_API - this is your public Stripe API key, generated in the Stripe dashboard
-    *  REACT_APP_backendURL - optional for your local development server
-    *  REACT_APP_clientid - this is the Stripe_connect clientID, generated in Stripe_connect settings
-    *  REACT_APP_stripe_plan - this is the ID for a second Stripe subscription plan, generated under Stripe products
+    *  PORT - What port the backend is on
+    *  DS_API_URL - Data Science API
+    *  DS_API_TOKEN - Secret Token for DS API
+    *  DATABASE_URL - Postgres URL for our database, includes username, password, port and database name
+    *  OKTA_URL_ISSUER - URL connecting authentification to Okta
+    *  OKTA_CLIENT_ID - Client specific id for web dev
+    *  REACT_APP_CLIENT_ID - Okta client specific id for front end
+    *  REACT_APP_OKTA_ISSUER_URI - Okta URL connecting with authentification for front end
+    *  REACT_APP_API_URI - API URL for back end API
+    *  REACT_APP_GOOGLE_MAPS_API_KEY - Google Maps API key
 
 # 5️⃣ Content Licenses
 
@@ -141,19 +133,22 @@ In order for the app to function correctly, the user must set up their own envir
 # 4️⃣ Testing
 
 🚫Document what you used for testing and why
+- SuperTest
+- Jest
+- Cypress
 
 # 4️⃣ Installation Instructions
 
 🚫explain how to install the required dependencies to get this project up and running with yarn and NPM
+- cd into the main root folder and then type 'npm i'
+- then type 'npm start'
 
 ## Other Scripts
 
 🚫replace these examples with your own
 
-    * typecheck - runs the TypeScript compiler
-    * build - creates a build of the application
-    * start - starts the production server after a build is created
-    * test - runs tests in **tests** directory \* eject - copy the configuration files and dependencies into the project so you have full control over them
+    * npm start - starts the production server after a build is created
+    * start: "craco --max_old_space_size=4096 start" - Increases JavaScript heap size
 
 # Contributing
 
