@@ -53,11 +53,11 @@ const Map = props => {
         defaultCenter={center}
         defaultZoom={zoom}
       >
-        <div style={{ position: 'fixed', top: '6px', left: '3px' }}>
-          <SearchBar />
-        </div>
         {createMarkers}
       </GoogleMapReact>
+      <div style={{ position: 'fixed', top: '6px', left: '3px' }}>
+        <SearchBar />
+      </div>
     </div>
   );
 };
