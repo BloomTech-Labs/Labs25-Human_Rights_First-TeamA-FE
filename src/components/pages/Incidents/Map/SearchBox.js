@@ -45,7 +45,6 @@ class SearchBox extends Component {
 
   onPlacesChanged = () => {
     const { onPlacesChanged } = this.props;
-
     if (onPlacesChanged) {
       onPlacesChanged(this.searchBox.getPlaces());
     }
@@ -60,6 +59,7 @@ class SearchBox extends Component {
         placeholder={placeholder}
         type="text"
         style={{
+          color: 'black',
           width: '392px',
           height: '48px',
           fontSize: '20px',

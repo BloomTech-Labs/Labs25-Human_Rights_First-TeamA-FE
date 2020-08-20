@@ -12,11 +12,8 @@ const Map = props => {
   const [apiReady, setApiReady] = useState(false);
   const [map, setMap] = useState(null);
   const [googlemaps, setGooglemaps] = useState(null);
+  const [center, setCenter] = useState({ lat: 38, lng: 267 });
 
-  const center = {
-    lat: 38,
-    lng: 267,
-  };
   let zoom = 3;
   if (window.screen.width >= 768) {
     zoom = 4;
@@ -32,6 +29,15 @@ const Map = props => {
       setMap(map);
       setGooglemaps(maps);
     }
+  };
+
+  const onPlacesChanged = places => {
+    console.log(center);
+    setCenter(
+      (center.lat = places[0].geometry.location.lat()),
+      (center.lng = places[0].geometry.location.lng())
+    );
+    console.log('center2', center);
   };
 
   useEffect(() => {
@@ -64,7 +70,7 @@ const Map = props => {
       <GoogleMapReact
         bootstrapURLKeys={{
           key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
-          libraries: 'places',
+          libraries: ['places', 'geometry'],
         }}
         defaultCenter={center}
         defaultZoom={zoom}
@@ -72,7 +78,13 @@ const Map = props => {
         onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
       >
         {createMarkers}
-        {apiReady && googlemaps && <SearchBox map={map} mapsapi={googlemaps} />}
+        {apiReady && googlemaps && (
+          <SearchBox
+            map={map}
+            mapsapi={googlemaps}
+            onPlacesChanged={onPlacesChanged}
+          />
+        )}
       </GoogleMapReact>
     </div>
   );
