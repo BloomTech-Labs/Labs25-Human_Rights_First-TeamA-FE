@@ -23,7 +23,6 @@ const Map = props => {
   }
 
   const handleApiLoaded = (map, maps) => {
-    console.log('Loading Api', map, 'maps', maps);
     if (map && maps) {
       setApiReady(true);
       setMap(map);
@@ -32,12 +31,10 @@ const Map = props => {
   };
 
   const onPlacesChanged = places => {
-    console.log(center);
     setCenter(
       (center.lat = places[0].geometry.location.lat()),
       (center.lng = places[0].geometry.location.lng())
     );
-    console.log('center2', center);
   };
 
   useEffect(() => {
@@ -51,7 +48,6 @@ const Map = props => {
       });
   }, []);
   let createMarkers;
-  console.log(incidents);
   if (incidents.length > 0) {
     createMarkers = incidents.map(incident => {
       return (
@@ -66,7 +62,7 @@ const Map = props => {
     });
   }
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
+    <div className="googlemap">
       <GoogleMapReact
         bootstrapURLKeys={{
           key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -78,14 +74,14 @@ const Map = props => {
         onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
       >
         {createMarkers}
-        {apiReady && googlemaps && (
-          <SearchBox
-            map={map}
-            mapsapi={googlemaps}
-            onPlacesChanged={onPlacesChanged}
-          />
-        )}
       </GoogleMapReact>
+      {apiReady && googlemaps && (
+        <SearchBox
+          map={map}
+          mapApi={googlemaps}
+          onPlacesChanged={onPlacesChanged}
+        />
+      )}
     </div>
   );
 };

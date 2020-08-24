@@ -1,70 +1,58 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class SearchBox extends Component {
-  static propTypes = {
-    mapsapi: PropTypes.shape({
-      places: PropTypes.shape({
-        SearchBox: PropTypes.func,
-      }),
-      event: PropTypes.shape({
-        clearInstanceListeners: PropTypes.func,
-      }),
-    }).isRequired,
-    placeholder: PropTypes.string,
-    onPlacesChanged: PropTypes.func,
-  };
-
-  static defaultProps = {
-    placeholder: 'Search...',
-    onPlacesChanged: null,
-  };
-
   constructor(props) {
     super(props);
-
-    this.searchInput = React.createRef();
+    this.clearSearchBox = this.clearSearchBox.bind(this);
   }
 
-  componentDidMount() {
-    const {
-      mapsapi: { places },
-    } = this.props;
-
-    this.searchBox = new places.SearchBox(this.searchInput.current);
-    this.searchBox.addListener('places_changed', this.onPlacesChanged);
+  componentDidMount({ map, mapApi } = this.props) {
+    const options = {
+      // restrict your search to a specific type of result
+      // types: ['geocode', 'address', 'establishment', '(regions)', '(cities)'],
+      // restrict your search to a specific country, or an array of countries
+      // componentRestrictions: { country: ['gb', 'us'] },
+    };
+    this.autoComplete = new mapApi.places.Autocomplete(
+      this.searchInput,
+      options
+    );
+    this.autoComplete.addListener('place_changed', this.onPlaceChanged);
+    this.autoComplete.bindTo('bounds', map);
   }
 
-  componentWillUnmount() {
-    const {
-      mapsapi: { event },
-    } = this.props;
-
-    event.clearInstanceListeners(this.searchBox);
+  componentWillUnmount({ mapApi } = this.props) {
+    mapApi.event.clearInstanceListeners(this.searchInput);
   }
 
-  onPlacesChanged = () => {
-    const { onPlacesChanged } = this.props;
-    if (onPlacesChanged) {
-      onPlacesChanged(this.searchBox.getPlaces());
+  onPlaceChanged = ({ map } = this.props) => {
+    const place = this.autoComplete.getPlace();
+
+    if (!place.geometry) return;
+    if (place.geometry.viewport) {
+      map.fitBounds(place.geometry.viewport);
+    } else {
+      map.setCenter(place.geometry.location);
+      map.setZoom(17);
     }
+
+    this.searchInput.blur();
   };
 
-  render() {
-    const { placeholder } = this.props;
+  clearSearchBox() {
+    this.searchInput.value = '';
+  }
 
+  render() {
     return (
       <input
-        ref={this.searchInput}
-        placeholder={placeholder}
-        type="text"
-        style={{
-          color: 'black',
-          width: '392px',
-          height: '48px',
-          fontSize: '20px',
-          padding: '12px 104px 11px 64px',
+        className="autocomplete-search"
+        ref={ref => {
+          this.searchInput = ref;
         }}
+        type="text"
+        onFocus={this.clearSearchBox}
+        placeholder="Enter a location"
       />
     );
   }
