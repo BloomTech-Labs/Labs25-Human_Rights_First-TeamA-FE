@@ -1,0 +1,42 @@
+.marker{
+    height: 25px;
+    width: 25px;
+    // background-color: red;
+    // border-radius: 20px;
+}
+
+.title-container{
+    .flexDisplay(row, space-between, center)
+}
+
+.evidence{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+}
+
+.ant-popover{
+    width: 70%;
+
+    @media @medium{
+        width: 50%;
+    }
+
+    @media @large{
+        width: 40%;
+    }
+
+    @media @xlarge{
+        width: 30%;
+    }
+
+    .ant-popover-title{
+        text-align: center;
+    }
+}
+
+.close-container{
+    width: 100%;
+    .flexDisplay(row, center, center);
+    margin-top: 2%;
+}

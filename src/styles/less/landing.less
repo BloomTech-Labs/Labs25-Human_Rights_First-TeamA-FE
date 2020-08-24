@@ -1,0 +1,40 @@
+.consent-container{
+    height: 100vh;
+    .flexDisplay(row, center, center);
+    width: 100%;
+
+    .consent-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 95%;
+        text-align: center;
+        @media @medium{
+            width: 60%;
+        }
+
+        @media @large{
+            width: 40%;
+        }
+
+        @media @xlarge{
+            width: 30%;
+        }
+        .ant-card-head{
+            padding: 0;
+            .ant-card-head-title{
+                overflow: visible;
+                text-align: center;
+                font-size: .8rem;
+
+                @media @medium{
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .button-container{
+            .flexDisplay(row, space-evenly, center);
+        }
+    }
+}

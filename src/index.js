@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './styles/css/index.css';
 import { Landing } from './components/pages/Landing/index';
+import Map from './components/pages/Incidents/Map/Map';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router';
-import 'antd/dist/antd.less';
+import 'antd/dist/antd.dark.less';
+// import 'antd/dist/antd.less';
 
 ReactDOM.render(
   <Router>
@@ -16,8 +19,19 @@ ReactDOM.render(
 
 function App() {
   return (
-    <Route exact path="/">
-      <Landing />
-    </Route>
+    <>
+      <Route exact path="/">
+        <Landing />
+      </Route>
+      <Route path="/home">
+        <Map />
+      </Route>
+      <Route path="/timeline">
+        <div>hello</div>
+      </Route>
+      <Route path="/cards">
+        <div> card path </div>
+      </Route>
+    </>
   );
 }
