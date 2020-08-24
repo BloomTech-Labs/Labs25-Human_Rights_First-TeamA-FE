@@ -24,10 +24,10 @@ const Landing = () => {
         className="consent-card"
       >
         <div className="button-container">
-          <a href="https://www.humanrightsfirst.org/">
+          <a href="https://www.humanrightsfirst.org/" data-cy="abandon">
             <Button type="primary">Abandon</Button>
           </a>
-          <Button type="primary" onClick={accept}>
+          <Button type="primary" onClick={accept} data-cy="continue">
             Continue
           </Button>
         </div>
