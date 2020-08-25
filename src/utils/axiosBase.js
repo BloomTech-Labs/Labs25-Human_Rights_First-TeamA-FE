@@ -9,6 +9,6 @@ export const axiosBase = () => {
     },
     //replace this with herouku URL
     // baseURL: 'https://ctl-shop.herokuapp.com/api/'
-    baseURL: 'http://localhost:8000/',
+    baseURL: 'https://labs25-hrf-teama-api.herokuapp.com/',
   });
 };
