@@ -226,7 +226,12 @@ table {
 }
 .autocomplete-search {
   color: black;
-  position: fixed;
-  left: 2%;
+  position: absolute;
+  left: 30%;
   top: 5%;
+}
+@media (min-width: 768px) {
+  .autocomplete-search {
+    left: 5%;
+  }
 }
