@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Input } from 'antd';
 
 class SearchBox extends Component {
   constructor(props) {
@@ -54,6 +55,16 @@ class SearchBox extends Component {
         onFocus={this.clearSearchBox}
         placeholder="Enter a location"
       />
+      // <div className="autocomplete-search">
+      // <Input
+      //   ref={ref => {
+      //     this.searchInput = ref;
+      //   }}
+      //   type="text"
+      //   onFocus={this.clearSearchBox}
+      //   placeholder="Enter a location"
+      // />
+      // </div>
     );
   }
 }

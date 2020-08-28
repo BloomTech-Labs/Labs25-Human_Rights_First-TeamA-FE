@@ -235,3 +235,10 @@ table {
     left: 5%;
   }
 }
+.autocomplete-search .ant-input {
+  color: black;
+}
+.autocomplete-search .ant-input input::placeholder {
+  /* Most modern browsers support this now. */
+  color: black;
+}
