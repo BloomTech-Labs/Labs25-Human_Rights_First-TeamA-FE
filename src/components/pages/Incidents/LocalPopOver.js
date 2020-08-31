@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Popover } from 'antd';
-const baton = require('../../../../resources/images/baton.png');
+const baton = require('../../../resources/images/baton.png');
 
-const Marker = props => {
+const LocalPopOver = props => {
   const [click, setClick] = useState(false);
   const [hover, setHover] = useState(false);
 
@@ -81,4 +81,4 @@ const Marker = props => {
   );
 };
 
-export default Marker;
+export default LocalPopOver;
