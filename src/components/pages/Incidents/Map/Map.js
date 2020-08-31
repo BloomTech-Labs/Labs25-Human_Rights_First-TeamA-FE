@@ -8,6 +8,7 @@ import { axiosBase } from '../../../../utils/axiosBase';
 
 const Map = props => {
   const [incidents, setIncidents] = useState([]);
+
   const center = {
     lat: 38,
     lng: 267,
