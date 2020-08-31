@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
-import ViewChange from '../../ViewChange/viewchange';
 
 import { v4 as uuidv4, v4 } from 'uuid';
 
@@ -45,8 +44,6 @@ const Map = props => {
       >
         {createMarkers}
       </GoogleMapReact>
-
-      <ViewChange />
     </div>
   );
 };

@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router';
 import 'antd/dist/antd.dark.less';
 import { axiosBase } from './utils/axiosBase';
+import ViewChange from './components/pages/ViewChange/viewchange';
 // import 'antd/dist/antd.less';
 
 ReactDOM.render(
@@ -40,6 +41,7 @@ function App() {
       <Route path="/map">
         <Map incidents={incidents} />
       </Route>
+      <ViewChange />
     </>
   );
 }
