@@ -8,7 +8,7 @@ export const axiosBase = () => {
       'Access-Control-Allow-Origin': '*',
     },
     //replace this with herouku URL
-    // baseURL: 'https://ctl-shop.herokuapp.com/api/'
-    baseURL: 'https://labs25-hrf-teama-api.herokuapp.com',
+    baseURL: 'http://localhost:8000',
+    // baseURL: 'https://labs25-hrf-teama-api.herokuapp.com',
   });
 };
