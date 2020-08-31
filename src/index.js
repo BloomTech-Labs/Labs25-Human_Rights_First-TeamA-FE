@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './styles/css/index.css';
 import { Landing } from './components/pages/Landing/index';
-import Map from './components/pages/Incidents/Map/Map';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router';
 import 'antd/dist/antd.dark.less';
 import { axiosBase } from './utils/axiosBase';
+import Map from './components/pages/Incidents/Map/Map';
+import LocalTimeline from './components/pages/Incidents/Timeline/Timeline';
 // import 'antd/dist/antd.less';
 
 ReactDOM.render(
@@ -39,6 +40,9 @@ function App() {
       </Route>
       <Route path="/map">
         <Map incidents={incidents} />
+      </Route>
+      <Route path="/timeline">
+        <LocalTimeline incidents={incidents} />
       </Route>
     </>
   );
