@@ -19,10 +19,10 @@ const Landing = () => {
   };
   return (
     <div className="consent-container">
-      <Card
-        title={`THIS SITE CONTAINS IMAGES OF GRAPHIC VIOLENCE`}
-        className="consent-card"
-      >
+      <h1>POLICE USE OF FORCE TRACKER</h1>
+      <p>Track incidents of police use of force in the United States</p>
+      <Card title={`WARNING`} className="consent-card">
+        <h2>THIS SITE CONTAINS IMAGES OF GRAPHIC VIOLENCE</h2>
         <div className="button-container">
           <a href="https://www.humanrightsfirst.org/">
             <Button type="primary">Abandon</Button>
