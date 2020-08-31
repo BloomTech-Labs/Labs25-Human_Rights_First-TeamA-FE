@@ -24,7 +24,7 @@ const Map = props => {
     axiosBase()
       .get('/incidents')
       .then(res => {
-        setIncidents(res.data);
+        setIncidents(res.data.data);
       })
       .catch(err => {
         console.log(err);
@@ -37,8 +37,8 @@ const Map = props => {
       return (
         <Marker
           key={uuidv4()}
-          lat={incident.latitude}
-          lng={incident.longitude}
+          lat={incident.geocoding.lat}
+          lng={incident.geocoding.long}
           text="Incident"
           incident={incident}
         />
