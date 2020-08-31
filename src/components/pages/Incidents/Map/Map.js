@@ -24,7 +24,6 @@ const Map = props => {
     axiosBase()
       .get('/incidents')
       .then(res => {
-        console.log('INFO', res.data.data);
         setIncidents(res.data.data);
       })
       .catch(err => {
