@@ -10,14 +10,10 @@ const ViewChange = props => {
         <Link to="/map">Map</Link>
       </Menu.Item>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" href="">
-          Timeline
-        </a>
+        <Link to="/timeline">Timeline</Link>
       </Menu.Item>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" href="">
-          Feed
-        </a>
+        <Link to="/feed">Feed</Link>
       </Menu.Item>
     </Menu>
   );
