@@ -69,7 +69,10 @@ const Marker = props => {
           onVisibleChange={handleClick}
         >
           {/* <divclassName="marker"></div> */}
-          <img src={baton} alt="baton" className="marker"></img>
+          {props.marker ? (
+            <img src={baton} alt="baton" className="marker"></img>
+          ) : null}
+          {props.text ? <p>{props.incident.title}</p> : null}
         </Popover>
       </Popover>
     </>

@@ -32,6 +32,7 @@ const Map = props => {
           lng={incident.longitude}
           text="Incident"
           incident={incident}
+          marker={true}
         />
       );
     });
