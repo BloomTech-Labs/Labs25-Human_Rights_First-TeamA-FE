@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Menu, Dropdown, Button } from 'antd';
+import { Link } from 'react-router-dom';
 
 const ViewChange = props => {
   const menu = (
     <Menu>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" href="">
-          Map
-        </a>
+        <Link to="/map">Map</Link>
       </Menu.Item>
       <Menu.Item>
         <a target="_blank" rel="noopener noreferrer" href="">
