@@ -72,7 +72,9 @@ const Marker = props => {
           {props.marker ? (
             <img src={baton} alt="baton" className="marker"></img>
           ) : null}
-          {props.text ? <p>{props.incident.title}</p> : null}
+          {props.text ? (
+            <p>{props.incident.title + props.incident.date}</p>
+          ) : null}
         </Popover>
       </Popover>
     </>

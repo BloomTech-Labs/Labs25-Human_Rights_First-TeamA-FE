@@ -33,6 +33,7 @@ const Map = props => {
           text="Incident"
           incident={incident}
           marker={true}
+          text={false}
         />
       );
     });
