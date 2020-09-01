@@ -232,10 +232,10 @@ table {
   margin-top: 2%;
 }
 #timeline {
-  padding: 0 5%;
+  padding: 5%;
 }
 @media (min-width: 992px) {
   #timeline {
-    padding: 0;
+    padding: 2%;
   }
 }
