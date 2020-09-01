@@ -231,3 +231,11 @@ table {
   align-items: center;
   margin-top: 2%;
 }
+#timeline {
+  padding: 0 5%;
+}
+@media (min-width: 992px) {
+  #timeline {
+    padding: 0;
+  }
+}

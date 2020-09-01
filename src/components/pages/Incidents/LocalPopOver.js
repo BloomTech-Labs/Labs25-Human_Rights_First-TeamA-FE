@@ -41,7 +41,8 @@ const LocalPopOver = props => {
         content={content}
         title={
           <div className="title-container">
-            <div>{props.incident.title}</div> <div>{props.incident.date}</div>
+            <div>{props.incident.title}</div>{' '}
+            <div>{props.incident.date.slice(0, 10)}</div>
           </div>
         }
         trigger="hover"
@@ -61,7 +62,8 @@ const LocalPopOver = props => {
           }
           title={
             <div className="title-container">
-              <div>{props.incident.title}</div> <div>{props.incident.date}</div>
+              <div>{props.incident.title}</div>{' '}
+              <div>{props.incident.date.slice(0, 10)}</div>
             </div>
           }
           trigger="click"
@@ -73,7 +75,10 @@ const LocalPopOver = props => {
             <img src={baton} alt="baton" className="marker"></img>
           ) : null}
           {props.text ? (
-            <p>{props.incident.title + props.incident.date}</p>
+            <p>{`${props.incident.title}: ${props.incident.date.slice(
+              0,
+              10
+            )}`}</p>
           ) : null}
         </Popover>
       </Popover>
