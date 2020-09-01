@@ -75,7 +75,7 @@ const LocalPopOver = props => {
             <img src={baton} alt="baton" className="marker"></img>
           ) : null}
           {props.text ? (
-            <p>{`${props.incident.title}: ${props.incident.date.slice(
+            <p>{`${props.incident.city}: ${props.incident.date.slice(
               0,
               10
             )}`}</p>
