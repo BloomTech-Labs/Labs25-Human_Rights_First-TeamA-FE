@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
+import ViewChange from '../../ViewChange/viewchange';
 
 import { v4 as uuidv4, v4 } from 'uuid';
 
 import { axiosBase } from '../../../../utils/axiosBase';
 
 const Map = props => {
-  const [incidents, setIncidents] = useState([]);
-
+  const incidents = props.incidents;
   const center = {
     lat: 38,
     lng: 267,
@@ -21,16 +21,6 @@ const Map = props => {
     zoom = 5;
   }
 
-  useEffect(() => {
-    axiosBase()
-      .get('/incidents')
-      .then(res => {
-        setIncidents(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, []);
   let createMarkers;
   console.log(incidents);
   if (incidents.length > 0) {
@@ -47,7 +37,7 @@ const Map = props => {
     });
   }
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
+    <div style={{ height: '100vh', width: '100%', position: 'relative' }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
         defaultCenter={center}
@@ -55,6 +45,8 @@ const Map = props => {
       >
         {createMarkers}
       </GoogleMapReact>
+
+      <ViewChange />
     </div>
   );
 };

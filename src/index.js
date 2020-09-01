@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './styles/css/index.css';
 import { Landing } from './components/pages/Landing/index';
@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router';
 import 'antd/dist/antd.dark.less';
 import TimelineLabel from './components/pages/Incidents/Timeline/timeline';
+import { axiosBase } from './utils/axiosBase';
 // import 'antd/dist/antd.less';
 
 ReactDOM.render(
@@ -19,19 +20,29 @@ ReactDOM.render(
 );
 
 function App() {
+  const [incidents, setIncidents] = useState([]);
+
+  useEffect(() => {
+    axiosBase()
+      .get('/incidents')
+      .then(res => {
+        setIncidents(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <>
       <Route exact path="/">
         <Landing />
       </Route>
-      <Route path="/home">
-        <Map />
+      <Route path="/map">
+        <Map incidents={incidents} />
       </Route>
       <Route path="/timeline">
-        <TimelineLabel />
-      </Route>
-      <Route path="/cards">
-        <div> card path </div>
+        <TimelineLabel incidents={incidents} />
       </Route>
     </>
   );

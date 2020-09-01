@@ -9,13 +9,13 @@ const Landing = () => {
 
   useEffect(() => {
     if (JSON.parse(localStorage.getItem('consent')) === true) {
-      match.push('/home');
+      match.push('/map');
     }
   }, []);
 
   const accept = () => {
     localStorage.setItem('consent', JSON.stringify(true));
-    match.push('/home');
+    match.push('/map');
   };
   return (
     <div className="consent-container">
