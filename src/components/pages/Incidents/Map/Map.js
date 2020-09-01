@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
-import Marker from './Marker';
-import ViewChange from '../../ViewChange/viewchange';
+import LocalPopOver from '../LocalPopOver';
 
 import { v4 as uuidv4, v4 } from 'uuid';
-
-import { axiosBase } from '../../../../utils/axiosBase';
 
 const Map = props => {
   const incidents = props.incidents;
@@ -26,12 +23,14 @@ const Map = props => {
   if (incidents.length > 0) {
     createMarkers = incidents.map(incident => {
       return (
-        <Marker
+        <LocalPopOver
           key={uuidv4()}
           lat={incident.latitude}
           lng={incident.longitude}
           text="Incident"
           incident={incident}
+          marker={true}
+          text={false}
         />
       );
     });
@@ -45,8 +44,6 @@ const Map = props => {
       >
         {createMarkers}
       </GoogleMapReact>
-
-      <ViewChange />
     </div>
   );
 };

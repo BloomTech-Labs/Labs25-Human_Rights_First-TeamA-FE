@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Popover } from 'antd';
-const baton = require('../../../../resources/images/baton.png');
+const baton = require('../../../resources/images/baton.png');
 
-const Marker = props => {
+const LocalPopOver = props => {
   const [click, setClick] = useState(false);
   const [hover, setHover] = useState(false);
 
@@ -69,11 +69,16 @@ const Marker = props => {
           onVisibleChange={handleClick}
         >
           {/* <divclassName="marker"></div> */}
-          <img src={baton} alt="baton" className="marker"></img>
+          {props.marker ? (
+            <img src={baton} alt="baton" className="marker"></img>
+          ) : null}
+          {props.text ? (
+            <p>{props.incident.title + props.incident.date}</p>
+          ) : null}
         </Popover>
       </Popover>
     </>
   );
 };
 
-export default Marker;
+export default LocalPopOver;

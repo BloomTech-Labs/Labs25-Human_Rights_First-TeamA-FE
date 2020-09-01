@@ -1,37 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Timeline } from 'antd';
-import { ClockCircleOutlined } from '@ant-design/icons';
+import LocalPopOver from '../LocalPopOver';
 
 const TimelineLabel = props => {
-  const [mode, setMode] = useState('left');
+  const [mode, setMode] = useState('alternate');
   const incidents = props.incidents;
 
-  // const MakeTimeline = () => {
-  //   return incidents.map(incident => {
-  //     <Timeline.Item></Timeline.Item>;
-  //   });
-  // };
-  return (
-    <Timeline mode={mode}>
-      <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
-      <Timeline.Item color="green">
-        Solve initial network problems 2015-09-01
-      </Timeline.Item>
-      <Timeline.Item dot={<ClockCircleOutlined style={{ fontSize: '16px' }} />}>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo.
-      </Timeline.Item>
-      <Timeline.Item color="red">
-        Network problems being solved 2015-09-01
-      </Timeline.Item>
-      <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
-      <Timeline.Item dot={<ClockCircleOutlined style={{ fontSize: '16px' }} />}>
-        Technical testing 2015-09-01
-      </Timeline.Item>
-    </Timeline>
-  );
+  const makeTimeline = () => {
+    return incidents.map(incident => {
+      return (
+        <Timeline.Item>
+          <LocalPopOver>
+            `{incident.data.city}, {incident.data.date}`
+          </LocalPopOver>
+        </Timeline.Item>
+      );
+    });
+  };
+  // console.log('this is incidents', incidents);
+  // console.log('makeTimeline', makeTimeline());
+  return <Timeline mode={mode}>{makeTimeline()}</Timeline>;
 };
 
 export default TimelineLabel;

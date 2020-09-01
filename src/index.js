@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './styles/css/index.css';
 import { Landing } from './components/pages/Landing/index';
-import Map from './components/pages/Incidents/Map/Map';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router';
 import 'antd/dist/antd.dark.less';
 import TimelineLabel from './components/pages/Incidents/Timeline/timeline';
 import { axiosBase } from './utils/axiosBase';
+import Map from './components/pages/Incidents/Map/Map';
+import ViewChange from './components/pages/ViewChange/viewchange';
 // import 'antd/dist/antd.less';
 
 ReactDOM.render(
@@ -44,6 +45,7 @@ function App() {
       <Route path="/timeline">
         <TimelineLabel incidents={incidents} />
       </Route>
+      <ViewChange />
     </>
   );
 }
