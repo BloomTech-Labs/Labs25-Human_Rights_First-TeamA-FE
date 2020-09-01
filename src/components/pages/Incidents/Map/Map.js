@@ -25,8 +25,8 @@ const Map = props => {
       return (
         <LocalPopOver
           key={uuidv4()}
-          lat={incident.latitude}
-          lng={incident.longitude}
+          lat={incident.geocoding.lat}
+          lng={incident.geocoding.long}
           text="Incident"
           incident={incident}
           marker={true}
@@ -35,6 +35,7 @@ const Map = props => {
       );
     });
   }
+
   return (
     <div style={{ height: '100vh', width: '100%', position: 'relative' }}>
       <GoogleMapReact

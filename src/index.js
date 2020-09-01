@@ -27,7 +27,7 @@ function App() {
     axiosBase()
       .get('/incidents')
       .then(res => {
-        setIncidents(res.data);
+        setIncidents(res.data.data);
       })
       .catch(err => {
         console.log(err);

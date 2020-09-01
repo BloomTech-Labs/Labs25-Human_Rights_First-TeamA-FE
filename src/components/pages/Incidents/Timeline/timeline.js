@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Timeline } from 'antd';
 import LocalPopOver from '../LocalPopOver';
 
@@ -7,18 +7,20 @@ const TimelineLabel = props => {
   const incidents = props.incidents;
 
   const makeTimeline = () => {
-    return incidents.map(incident => {
-      return (
-        <Timeline.Item>
-          <LocalPopOver>
-            `{incident.data.city}, {incident.data.date}`
-          </LocalPopOver>
-        </Timeline.Item>
-      );
-    });
+    if (incidents.length > 0) {
+      console.log('incidents');
+      return incidents.map(incident => {
+        return (
+          <Timeline.Item>
+            <LocalPopOver incident={incident} marker={false} text={true}>
+              {`${incident.city}, ${incident.date.slice(0, 10)}`}
+            </LocalPopOver>
+          </Timeline.Item>
+        );
+      });
+    }
   };
-  // console.log('this is incidents', incidents);
-  // console.log('makeTimeline', makeTimeline());
+
   return <Timeline mode={mode}>{makeTimeline()}</Timeline>;
 };
 

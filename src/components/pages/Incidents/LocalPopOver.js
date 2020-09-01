@@ -22,8 +22,8 @@ const LocalPopOver = props => {
   };
 
   const linkStore = () => {
-    if (props.incident.evidence.length > 0) {
-      return props.incident.evidence.map(link => (
+    if (props.incident.links.length > 0) {
+      return props.incident.links.map(link => (
         <div className="evidence">
           {' '}
           <a href={link}>{link} </a>
