@@ -189,8 +189,8 @@ table {
 }
 .marker {
   position: absolute;
-  height: 30px;
-  width: 20px;
+  height: 40px;
+  width: 30px;
   left: -10px;
   top: -30px;
 }
