@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Popover } from 'antd';
-const bluemarker = require('../../../../resources/images/blue_marker.png');
+const orangemarker = require('../../../../resources/images/orange_blue_marker.png');
 
 const Marker = props => {
   const [click, setClick] = useState(false);
@@ -69,7 +69,7 @@ const Marker = props => {
           onVisibleChange={handleClick}
         >
           {/* <divclassName="marker"></div> */}
-          <img src={bluemarker} alt="baton" className="marker"></img>
+          <img src={orangemarker} alt="map marker" className="marker"></img>
         </Popover>
       </Popover>
     </>
