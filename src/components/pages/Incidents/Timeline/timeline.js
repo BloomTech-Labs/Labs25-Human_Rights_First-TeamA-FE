@@ -3,7 +3,7 @@ import { Timeline } from 'antd';
 import LocalPopOver from '../LocalPopOver';
 
 const TimelineLabel = props => {
-  let mode = 'right';
+  let mode = 'left';
   const incidents = props.incidents;
   if (window.screen.width >= 768) {
     mode = 'alternate';
