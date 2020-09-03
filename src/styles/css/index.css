@@ -188,8 +188,11 @@ table {
   align-items: center;
 }
 .marker {
-  height: 25px;
-  width: 25px;
+  position: absolute;
+  height: 40px;
+  width: 30px;
+  left: -10px;
+  top: -30px;
 }
 .title-container {
   display: flex;
@@ -230,6 +233,11 @@ table {
   justify-content: center;
   align-items: center;
   margin-top: 2%;
+}
+.close-container .close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 #timeline {
   background-color: #14213d;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 import LocalPopOver from '../LocalPopOver';
+import greystyle from './snazzymapGreyscale';
 
 import { v4 as uuidv4, v4 } from 'uuid';
 
@@ -9,6 +10,11 @@ const Map = props => {
   const center = {
     lat: 38,
     lng: 267,
+  };
+
+  const mapOptions = {
+    fullscreenControl: false,
+    styles: greystyle,
   };
   let zoom = 3;
   if (window.screen.width >= 768) {
@@ -27,7 +33,6 @@ const Map = props => {
           key={uuidv4()}
           lat={incident.geocoding.lat}
           lng={incident.geocoding.long}
-          text="Incident"
           incident={incident}
           marker={true}
           text={false}
@@ -42,6 +47,7 @@ const Map = props => {
         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
         defaultCenter={center}
         defaultZoom={zoom}
+        options={mapOptions}
       >
         {createMarkers}
       </GoogleMapReact>

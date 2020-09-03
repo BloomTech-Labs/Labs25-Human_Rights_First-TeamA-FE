@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Popover } from 'antd';
-const baton = require('../../../resources/images/baton.png');
+const orangemarker = require('../../../resources/images/orange_blue_marker.png');
 
 const LocalPopOver = props => {
   const [click, setClick] = useState(false);
@@ -54,9 +54,9 @@ const LocalPopOver = props => {
             <div>
               {content}
               <div className="close-container">
-                <a onClick={handleHide} className="close">
+                <button onClick={handleHide} className="close">
                   Close
-                </a>
+                </button>
               </div>
             </div>
           }
@@ -72,7 +72,7 @@ const LocalPopOver = props => {
         >
           {/* <divclassName="marker"></div> */}
           {props.marker ? (
-            <img src={baton} alt="baton" className="marker"></img>
+            <img src={orangemarker} alt="map marker" className="marker"></img>
           ) : null}
           {props.text ? (
             <p>{`${props.incident.city}: ${props.incident.date.slice(
