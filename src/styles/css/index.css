@@ -154,7 +154,7 @@ table {
   width: 95%;
   text-align: center;
 }
-@media (min-width:320px) {
+@media (min-width: 320px) {
   .consent-container .consent-card {
     width: 80%;
   }
