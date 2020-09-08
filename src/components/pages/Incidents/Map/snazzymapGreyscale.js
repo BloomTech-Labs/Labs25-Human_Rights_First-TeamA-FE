@@ -4,13 +4,67 @@ const greystyle = [
     elementType: 'all',
     stylers: [
       {
-        saturation: '-100',
+        lightness: 15,
+      },
+      {
+        weight: '0.2',
+      },
+    ],
+  },
+  {
+    featureType: 'administrative.country',
+    elementType: 'geometry.stroke',
+    stylers: [
+      {
+        visibility: 'on',
+      },
+      {
+        weight: 2,
+      },
+    ],
+  },
+  {
+    featureType: 'administrative',
+    elementType: 'labels.text',
+    stylers: [
+      {
+        color: '#14213d',
+      },
+    ],
+  },
+  {
+    featureType: 'administrative.country',
+    elementType: 'labels.text',
+    stylers: [
+      {
+        visibility: 'off',
       },
     ],
   },
   {
     featureType: 'administrative.province',
-    elementType: 'all',
+    elementType: 'geometry.stroke',
+    stylers: [
+      {
+        weight: 1.5,
+      },
+      {
+        color: '#808080',
+      },
+    ],
+  },
+  {
+    featureType: 'water',
+    elementType: 'geometry.fill',
+    stylers: [
+      {
+        color: '#d3d3d3',
+      },
+    ],
+  },
+  {
+    featureType: 'water',
+    elementType: 'labels.text',
     stylers: [
       {
         visibility: 'off',
@@ -54,6 +108,9 @@ const greystyle = [
       {
         saturation: '-100',
       },
+      {
+        weight: 0.75,
+      },
     ],
   },
   {
@@ -91,7 +148,7 @@ const greystyle = [
         saturation: -100,
       },
       {
-        visibility: 'simplified',
+        visibility: 'off',
       },
     ],
   },
