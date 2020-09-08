@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Input } from 'antd';
+import { Input, AutoComplete } from 'antd';
 
 class SearchBox extends Component {
   constructor(props) {
@@ -20,6 +20,7 @@ class SearchBox extends Component {
     );
     this.autoComplete.addListener('place_changed', this.onPlaceChanged);
     this.autoComplete.bindTo('bounds', map);
+    console.log(this.autoComplete);
   }
 
   componentWillUnmount({ mapApi } = this.props) {
@@ -28,6 +29,7 @@ class SearchBox extends Component {
 
   onPlaceChanged = ({ map } = this.props) => {
     const place = this.autoComplete.getPlace();
+    console.log('Hello');
 
     if (!place.geometry) return;
     if (place.geometry.viewport) {
@@ -46,17 +48,8 @@ class SearchBox extends Component {
 
   render() {
     return (
-      <input
-        className="autocomplete-search"
-        ref={ref => {
-          this.searchInput = ref;
-        }}
-        type="text"
-        onFocus={this.clearSearchBox}
-        placeholder="Enter a location"
-      />
-      // <div className="autocomplete-search">
-      // <Input
+      // <input
+      //   className="autocomplete-search"
       //   ref={ref => {
       //     this.searchInput = ref;
       //   }}
@@ -64,7 +57,22 @@ class SearchBox extends Component {
       //   onFocus={this.clearSearchBox}
       //   placeholder="Enter a location"
       // />
-      // </div>
+      <div className="autocomplete-search">
+        <AutoComplete>
+          <Input.Search
+            autoComplete="on"
+            id={'map-search-box'}
+            ref={ref => {
+              this.searchInput = ref;
+            }}
+            type="text"
+            onFocus={this.clearSearchBox}
+            placeholder="Enter a location"
+          />
+        </AutoComplete>
+      </div>
+
+      // FIX AUTOCOMPLETE
     );
   }
 }

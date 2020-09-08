@@ -6,19 +6,27 @@
 .autocomplete-search {
   color: black;
   position: absolute;
-  left: 30%;
+  display: flex;
   top: 5%;
+  justify-content: center;
+  width: 100%;
 
   @media @medium {
-    left: 5%;
+    margin: 0 auto;
+    padding: 0 1%;
+    justify-content: left;
+    width: 100%;
   }
 
-  .ant-input{
-    color:black;
+  .ant-input {
+    color: black;
 
-    input::placeholder { /* Most modern browsers support this now. */
+    input::placeholder {
+      /* Most modern browsers support this now. */
       color: black;
-   }
-    
+    }
   }
+}
+#map-search-box {
+  width: auto;
 }
