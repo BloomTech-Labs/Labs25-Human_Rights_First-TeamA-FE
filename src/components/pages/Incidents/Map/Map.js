@@ -17,7 +17,9 @@ const Map = props => {
   const mapOptions = {
     fullscreenControl: false,
     styles: greystyle,
+    minZoom: 5,
   };
+
   let zoom = 3;
   if (window.screen.width >= 768) {
     zoom = 4;
