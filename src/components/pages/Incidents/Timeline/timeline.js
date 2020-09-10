@@ -2,31 +2,29 @@ import React, { useEffect, useState } from 'react';
 import { Timeline, DatePicker, Space } from 'antd';
 import LocalPopOver from '../LocalPopOver';
 
-const { RangePicker } = DatePicker;
-
 const TimelineLabel = props => {
-  const [date, setDate] = useState([]);
+  const [endDate, setEndDate] = useState('');
+  const [startDate, setStartDate] = useState('');
   let mode = 'left';
   const incidents = props.incidents;
   const [filteredIncidents, setFilteredIncidents] = useState(incidents);
-  console.log(filteredIncidents);
   if (window.screen.width >= 768) {
     mode = 'alternate';
   }
 
   useEffect(() => {
-    if (date.length && date[0] && date[1]) {
+    if (startDate && endDate) {
       const results = incidents.filter(el => {
         const d = Date.parse(el.date);
-        const start = Date.parse(date[0]);
-        const end = Date.parse(date[1]);
+        const start = Date.parse(startDate);
+        const end = Date.parse(endDate);
         return d >= start && d <= end;
       });
       setFilteredIncidents(results);
     } else {
       setFilteredIncidents(incidents);
     }
-  }, [date, incidents]);
+  }, [startDate, endDate, incidents]);
 
   const makeTimeline = () => {
     if (filteredIncidents.length > 0) {
@@ -40,17 +38,26 @@ const TimelineLabel = props => {
     }
   };
 
-  const pickDate = () => {
+  const setStartValue = (value, dateString) => {
+    setStartDate(dateString);
+  };
+
+  const setEndValue = (value, dateString) => {
+    setEndDate(dateString);
+  };
+
+  const newPickDate = () => {
     return (
-      <Space direction="horizontal" size={12}>
-        <RangePicker onCalendarChange={value => setDate(value)} />
+      <Space direction="vertical">
+        <DatePicker onChange={setStartValue} />
+        <DatePicker onChange={setEndValue} />
       </Space>
     );
   };
 
   return (
     <Timeline id="timeline" mode={mode}>
-      {pickDate()}
+      {newPickDate()}
       {makeTimeline()}
     </Timeline>
   );
