@@ -225,21 +225,11 @@ table {
 }
 .ant-popover .ant-popover-title {
   text-align: center;
-  background-color: #e5e5e5;
 }
 .ant-popover .ant-popover-title div {
   color: #14213d;
 }
-.ant-popover-inner-content {
-  background-color: #e5e5e5;
-}
-.ant-popover-inner-content a {
-  color: #fca311;
-}
 .ant-popover-inner-content h3 {
-  color: #14213d;
-}
-.ant-popover-inner-content div {
   color: #14213d;
 }
 .close-container {

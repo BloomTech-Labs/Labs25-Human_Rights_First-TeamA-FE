@@ -1,9 +1,11 @@
 // #ec3944
 module.exports = {
   '@primary-color': '#373737',
-  '@link-color': ' #ec3944',
+  '@link-color': '#fca311',
   '@success-color': '#52c41a',
   '@warning-color': '#faad14',
+  '@popover-background': '#e5e5e5',
+  '@popover-color': '#14213d',
   '@error-color': '#f5222d',
   '@font-size-base': '14px',
   '@heading-color': 'white',
