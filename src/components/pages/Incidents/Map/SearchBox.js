@@ -1,78 +1,54 @@
 import React, { Component } from 'react';
-import { Input, AutoComplete } from 'antd';
-
+import { Form, Row, Col } from 'antd';
+import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
+import { AutoComplete } from './Autocomplete';
 class SearchBox extends Component {
   constructor(props) {
     super(props);
-    this.clearSearchBox = this.clearSearchBox.bind(this);
-  }
-
-  componentDidMount({ map, mapApi } = this.props) {
-    const options = {
-      // restrict your search to a specific type of result
-      // types: ['geocode', 'address', 'establishment', '(regions)', '(cities)'],
-      // restrict your search to a specific country, or an array of countries
-      // componentRestrictions: { country: ['gb', 'us'] },
+    this.state = {
+      address: '',
     };
-    this.autoComplete = new mapApi.places.Autocomplete(
-      this.searchInput,
-      options
-    );
-    this.autoComplete.addListener('place_changed', this.onPlaceChanged);
-    this.autoComplete.bindTo('bounds', map);
-    console.log(this.autoComplete);
   }
 
   componentWillUnmount({ mapApi } = this.props) {
     mapApi.event.clearInstanceListeners(this.searchInput);
   }
-
-  onPlaceChanged = ({ map } = this.props) => {
-    const place = this.autoComplete.getPlace();
-    console.log('Hello');
-
-    if (!place.geometry) return;
-    if (place.geometry.viewport) {
-      map.fitBounds(place.geometry.viewport);
-    } else {
-      map.setCenter(place.geometry.location);
-      map.setZoom(17);
-    }
-
-    this.searchInput.blur();
+  onPlaceChanged = address => {
+    console.log(address);
+    geocodeByAddress(address)
+      .then(async results => {
+        if (!results[0].geometry) return;
+        if (results[0].geometry.viewport) {
+          this.props.map.fitBounds(results[0].geometry.viewport);
+        } else {
+          this.props.map.setCenter(results[0].geometry.location);
+          this.props.map.setZoom(17);
+        }
+        return getLatLng(results[0]);
+      })
+      .catch(error => {
+        console.error('Error', error);
+      });
   };
 
-  clearSearchBox() {
-    this.searchInput.value = '';
+  clearAddress() {
+    this.setState({ address: '' });
   }
 
   render() {
     return (
-      // <input
-      //   className="autocomplete-search"
-      //   ref={ref => {
-      //     this.searchInput = ref;
-      //   }}
-      //   type="text"
-      //   onFocus={this.clearSearchBox}
-      //   placeholder="Enter a location"
-      // />
-      <div className="autocomplete-search">
-        <AutoComplete>
-          <Input.Search
-            autoComplete="on"
-            id={'map-search-box'}
-            ref={ref => {
-              this.searchInput = ref;
-            }}
-            type="text"
-            onFocus={this.clearSearchBox}
-            placeholder="Enter a location"
-          />
-        </AutoComplete>
-      </div>
-
-      // FIX AUTOCOMPLETE
+      <Form className="autocomplete-search">
+        <Row>
+          <Col>
+            <AutoComplete
+              address={this.state.address}
+              clearAddress={this.clearAddress}
+              onChange={this.handleAddressChange}
+              onAddressSelect={this.onPlaceChanged}
+            />
+          </Col>
+        </Row>
+      </Form>
     );
   }
 }
