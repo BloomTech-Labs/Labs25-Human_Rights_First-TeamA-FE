@@ -26,6 +26,12 @@ function App() {
       <Route path="/home">
         <Map />
       </Route>
+      <Route path="/timeline">
+        <div>hello</div>
+      </Route>
+      <Route path="/cards">
+        <div> card path </div>
+      </Route>
     </>
   );
 }

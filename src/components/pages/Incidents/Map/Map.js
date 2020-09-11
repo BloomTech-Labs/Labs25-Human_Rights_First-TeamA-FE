@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
+
 import SearchBox from './SearchBox';
+import greystyle from './snazzymapGreyscale';
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -12,6 +14,15 @@ const Map = props => {
   const [apiReady, setApiReady] = useState(false);
   const [map, setMap] = useState(null);
   const [googlemaps, setGooglemaps] = useState(null);
+  const center = {
+    lat: 38,
+    lng: 267,
+  };
+  const mapOptions = {
+    fullscreenControl: false,
+    styles: greystyle,
+    minZoom: 5,
+  };
 
   let zoom = 3;
   if (window.screen.width >= 768) {
@@ -33,7 +44,7 @@ const Map = props => {
     axiosBase()
       .get('/incidents')
       .then(res => {
-        setIncidents(res.data);
+        setIncidents(res.data.data);
       })
       .catch(err => {
         console.log(err);
@@ -45,8 +56,8 @@ const Map = props => {
       return (
         <Marker
           key={uuidv4()}
-          lat={incident.latitude}
-          lng={incident.longitude}
+          lat={incident.geocoding.lat}
+          lng={incident.geocoding.long}
           text="Incident"
           incident={incident}
         />
@@ -64,6 +75,7 @@ const Map = props => {
         defaultZoom={zoom}
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
+        options={mapOptions}
       >
         {createMarkers}
       </GoogleMapReact>
