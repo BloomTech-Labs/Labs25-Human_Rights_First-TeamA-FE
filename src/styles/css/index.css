@@ -262,10 +262,9 @@ p {
 }
 #map-search-box {
   width: auto;
-
+}
 .close-container .close {
   background-color: transparent;
   border: none;
   cursor: pointer;
-
 }
