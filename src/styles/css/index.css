@@ -231,6 +231,38 @@ p {
   align-items: center;
   margin-top: 2%;
 }
+
+.googlemap {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.autocomplete-search {
+  color: black;
+  position: absolute;
+  display: flex;
+  top: 5%;
+  justify-content: center;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .autocomplete-search {
+    margin: 0 auto;
+    padding: 0 1%;
+    justify-content: left;
+    width: 100%;
+  }
+}
+.autocomplete-search .ant-input {
+  color: black;
+}
+.autocomplete-search .ant-input input::placeholder {
+  /* Most modern browsers support this now. */
+  color: black;
+}
+#map-search-box {
+  width: auto;
+}
 .close-container .close {
   background-color: transparent;
   border: none;
