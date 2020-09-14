@@ -232,6 +232,9 @@ table {
 .ant-popover-inner-content h3 {
   color: #14213d;
 }
+.ant-popover-inner-content .evidence a {
+  color: #14213d;
+}
 .close-container {
   width: 100%;
   display: flex;
