@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Timeline, DatePicker, Space } from 'antd';
+import LocalSlider from './slider';
 import LocalPopOver from '../LocalPopOver';
 
 const TimelineLabel = props => {
@@ -54,9 +55,11 @@ const TimelineLabel = props => {
       </Space>
     );
   };
+  console.log(startDate);
 
   return (
     <Timeline id="timeline" mode={mode}>
+      <LocalSlider setStartDate={setStartDate} setEndDate={setEndDate} />
       {newPickDate()}
       {makeTimeline()}
     </Timeline>
