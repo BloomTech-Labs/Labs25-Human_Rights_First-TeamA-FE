@@ -1,0 +1,32 @@
+.googlemap {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.autocomplete-search {
+  color: black;
+  position: absolute;
+  display: flex;
+  top: 5%;
+  justify-content: center;
+  width: 100%;
+
+  @media @medium {
+    margin: 0 auto;
+    padding: 0 1%;
+    justify-content: left;
+    width: 100%;
+  }
+
+  .ant-input {
+    color: black;
+
+    input::placeholder {
+      /* Most modern browsers support this now. */
+      color: black;
+    }
+  }
+}
+#map-search-box {
+  width: auto;
+}

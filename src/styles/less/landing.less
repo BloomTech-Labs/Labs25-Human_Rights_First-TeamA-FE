@@ -1,57 +1,58 @@
+.upper-container {
+  text-align: center;
+  background-color: #14213d;
+  height: 25%;
+  h1 {
+    color: #fca311;
+    font-size: 2.2rem;
+    padding-top: 3%;
+    padding-bottom: 2%;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0 25px;
+}
+
+p {
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+  padding-bottom: 3%;
+}
+
 .consent-container {
-  background-color: #202020;
-  height: 100vh;
+  margin-top: 15vh;
   .flexDisplay(column, space-evenly, center);
   flex-wrap: wrap;
   width: 100%;
   padding-bottom: 25vh;
 
-  h1 {
-    font-size: 2rem;
-    text-align: center;
-    padding: 0 25px;
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
   }
 
-  p {
-    font-size: 1.3rem;
-    text-align: center;
-    padding: 0 25px;
+  .ant-card-head {
+    padding: 0;
+    .ant-card-head-title {
+      overflow: auto;
+      text-align: center;
+      font-size: 1.5rem;
+    }
   }
 
-  .consent-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 95%;
-    text-align: center;
-    @media @xsmall {
-      width: 80%;
+  .button-container {
+    .flexDisplay(row, center, center);
+    .ant-btn {
+      margin: 0 8px;
+      color: #fca311;
+      background-color: #14213d;
     }
-
-    @media @medium {
-      width: 60%;
-    }
-
-    @media @large {
-      width: 50%;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      margin-bottom: 25px;
-    }
-
-    .ant-card-head {
-      padding: 0;
-      .ant-card-head-title {
-        overflow: auto;
-        text-align: center;
-        font-size: 1.5rem;
-      }
-    }
-
-    .button-container {
-      .flexDisplay(row, space-evenly, center);
+    #continue-btn {
+      color: white;
     }
   }
 }

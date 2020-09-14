@@ -1,21 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 import LocalPopOver from '../LocalPopOver';
+import SearchBox from './SearchBox';
 import greystyle from './snazzymapGreyscale';
 
-import { v4 as uuidv4, v4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 const Map = props => {
   const incidents = props.incidents;
+  const [apiReady, setApiReady] = useState(false);
+  const [map, setMap] = useState(null);
+  const [googlemaps, setGooglemaps] = useState(null);
   const center = {
     lat: 38,
     lng: 267,
   };
-
   const mapOptions = {
     fullscreenControl: false,
     styles: greystyle,
+    minZoom: 5,
   };
+
   let zoom = 3;
   if (window.screen.width >= 768) {
     zoom = 4;
@@ -24,8 +29,15 @@ const Map = props => {
     zoom = 5;
   }
 
+  const handleApiLoaded = (map, maps) => {
+    if (map && maps) {
+      setApiReady(true);
+      setMap(map);
+      setGooglemaps(maps);
+    }
+  };
+
   let createMarkers;
-  console.log(incidents);
   if (incidents.length > 0) {
     createMarkers = incidents.map(incident => {
       return (
@@ -42,15 +54,21 @@ const Map = props => {
   }
 
   return (
-    <div style={{ height: '100vh', width: '100%', position: 'relative' }}>
+    <div className="googlemap">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
-        defaultCenter={center}
+        bootstrapURLKeys={{
+          key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+          libraries: ['places', 'geometry'],
+        }}
+        defaultCenter={{ lat: 38, lng: 267 }}
         defaultZoom={zoom}
+        yesIWantToUseGoogleMapApiInternals
+        onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
         options={mapOptions}
       >
         {createMarkers}
       </GoogleMapReact>
+      {apiReady && googlemaps && <SearchBox map={map} mapApi={googlemaps} />}
     </div>
   );
 };
