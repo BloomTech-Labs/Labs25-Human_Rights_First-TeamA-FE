@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Popover } from 'antd';
-const orangemarker = require('../../../../resources/images/orange_blue_marker.png');
+const orangemarker = require('../../../resources/images/orange_blue_marker.png');
 
-const Marker = props => {
+const LocalPopOver = props => {
   const [click, setClick] = useState(false);
   const [hover, setHover] = useState(false);
 
@@ -41,7 +41,8 @@ const Marker = props => {
         content={content}
         title={
           <div className="title-container">
-            <div>{props.incident.title}</div> <div>{props.incident.date}</div>
+            <div>{props.incident.title}</div>{' '}
+            <div>{props.incident.date.slice(0, 10)}</div>
           </div>
         }
         trigger="hover"
@@ -61,7 +62,8 @@ const Marker = props => {
           }
           title={
             <div className="title-container">
-              <div>{props.incident.title}</div> <div>{props.incident.date}</div>
+              <div>{props.incident.title}</div>{' '}
+              <div>{props.incident.date.slice(0, 10)}</div>
             </div>
           }
           trigger="click"
@@ -69,11 +71,19 @@ const Marker = props => {
           onVisibleChange={handleClick}
         >
           {/* <divclassName="marker"></div> */}
-          <img src={orangemarker} alt="map marker" className="marker"></img>
+          {props.marker ? (
+            <img src={orangemarker} alt="map marker" className="marker"></img>
+          ) : null}
+          {props.text ? (
+            <p>{`${props.incident.city}: ${props.incident.date.slice(
+              0,
+              10
+            )}`}</p>
+          ) : null}
         </Popover>
       </Popover>
     </>
   );
 };
 
-export default Marker;
+export default LocalPopOver;

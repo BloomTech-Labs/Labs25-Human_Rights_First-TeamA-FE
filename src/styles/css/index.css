@@ -223,6 +223,15 @@ p {
 .ant-popover .ant-popover-title {
   text-align: center;
 }
+.ant-popover .ant-popover-title div {
+  color: #14213d;
+}
+.ant-popover-inner-content h3 {
+  color: #14213d;
+}
+.ant-popover-inner-content .evidence a {
+  color: #14213d;
+}
 .close-container {
   width: 100%;
   display: flex;
@@ -267,4 +276,23 @@ p {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+#timeline {
+  background-color: #14213d;
+  padding: 5%;
+}
+#timeline .ant-timeline-item-head {
+  background-color: #ffffff;
+}
+#timeline .ant-timeline-item-head-blue {
+  border: 3px solid;
+  border-color: #fca311;
+}
+#timeline .ant-timeline-item-tail {
+  border-left: 2px solid #ffffff;
+}
+@media (min-width: 992px) {
+  #timeline {
+    padding: 2%;
+  }
 }

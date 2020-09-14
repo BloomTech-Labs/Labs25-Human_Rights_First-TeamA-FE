@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
-import Marker from './Marker';
-
+import LocalPopOver from '../LocalPopOver';
 import SearchBox from './SearchBox';
 import greystyle from './snazzymapGreyscale';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { axiosBase } from '../../../../utils/axiosBase';
-
 const Map = props => {
-  const [incidents, setIncidents] = useState([]);
+  const incidents = props.incidents;
   const [apiReady, setApiReady] = useState(false);
   const [map, setMap] = useState(null);
   const [googlemaps, setGooglemaps] = useState(null);
@@ -40,30 +37,22 @@ const Map = props => {
     }
   };
 
-  useEffect(() => {
-    axiosBase()
-      .get('/incidents')
-      .then(res => {
-        setIncidents(res.data.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, []);
   let createMarkers;
   if (incidents.length > 0) {
     createMarkers = incidents.map(incident => {
       return (
-        <Marker
+        <LocalPopOver
           key={uuidv4()}
           lat={incident.geocoding.lat}
           lng={incident.geocoding.long}
-          text="Incident"
           incident={incident}
+          marker={true}
+          text={false}
         />
       );
     });
   }
+
   return (
     <div className="googlemap">
       <GoogleMapReact
