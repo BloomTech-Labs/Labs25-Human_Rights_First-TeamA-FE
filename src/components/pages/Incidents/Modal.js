@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button } from 'antd';
+import { Modal } from 'antd';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
 
 const IncidentModal = props => {
@@ -30,17 +30,22 @@ const IncidentModal = props => {
         footer={null}
         visible={visible}
       >
-        <div className="title-container">
-          <div>{incident.title}</div> <div>{incident.date.slice(0, 10)}</div>
-          {incident.links.map(url => (
-            <>
-              {url.toLowerCase().includes('twitter') ? (
-                <TwitterTweetEmbed tweetId={getTweetId(url)} />
-              ) : (
-                <p>{url}</p>
-              )}
-            </>
-          ))}
+        <div className="modal-incident-container">
+          <div className="modal-incident-title">
+            <h2>{incident.title}</h2>
+            <p>{incident.date.slice(0, 10)}</p>
+          </div>
+          <div className="incident-links-container">
+            {incident.links.map(url => (
+              <>
+                {url.toLowerCase().includes('twitter') ? (
+                  <TwitterTweetEmbed tweetId={getTweetId(url)} />
+                ) : (
+                  <p>{url}</p>
+                )}
+              </>
+            ))}
+          </div>
         </div>
         <TwitterTweetEmbed />
       </Modal>
