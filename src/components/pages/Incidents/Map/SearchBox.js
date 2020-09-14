@@ -10,9 +10,6 @@ class SearchBox extends Component {
     };
   }
 
-  componentWillUnmount({ mapApi } = this.props) {
-    mapApi.event.clearInstanceListeners(this.searchInput);
-  }
   onPlaceChanged = address => {
     console.log(address);
     geocodeByAddress(address)
