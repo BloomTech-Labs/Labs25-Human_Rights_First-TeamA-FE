@@ -39,6 +39,25 @@ const LocalSlider = props => {
 
   return (
     <div>
+      <div className="date-range-container">
+        <div>
+          {props.startDate
+            ? props.startDate
+            : `${startDate.getFullYear()}-${(
+                '0' +
+                (startDate.getMonth() + 1)
+              ).slice(-2)}-${startDate.getDate()}`}
+        </div>
+        <div> - </div>
+        <div>
+          {props.endDate
+            ? props.endDate
+            : `${endDate.getFullYear()}-${(
+                '0' +
+                (endDate.getMonth() + 1)
+              ).slice(-2)}-${endDate.getDate()}`}
+        </div>
+      </div>
       <Slider
         range
         defaultValue={[0, 9]}
