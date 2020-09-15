@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Timeline, DatePicker, Space } from 'antd';
+import LocalSlider from './LocalSlider';
 import LocalPopOver from '../LocalPopOver';
 
 const TimelineLabel = props => {
@@ -54,10 +55,18 @@ const TimelineLabel = props => {
       </Space>
     );
   };
-
+  // window.screen.width >= 768
   return (
     <Timeline id="timeline" mode={mode}>
-      {newPickDate()}
+      {window.screen.width < 768 ? (
+        <LocalSlider
+          setStartDate={setStartDate}
+          setEndDate={setEndDate}
+          startDate={startDate}
+          endDate={endDate}
+        />
+      ) : null}
+      {window.screen.width >= 768 ? newPickDate() : null}
       {makeTimeline()}
     </Timeline>
   );
