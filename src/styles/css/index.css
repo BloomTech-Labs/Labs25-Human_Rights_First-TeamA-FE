@@ -264,6 +264,12 @@ p {
     padding: 2%;
   }
 }
+.date-range-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 .googlemap {
   height: 100vh;
   width: 100%;
