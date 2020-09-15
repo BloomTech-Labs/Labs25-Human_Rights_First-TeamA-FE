@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './styles/css/index.css';
 import { Landing } from './components/pages/Landing/index';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { useHistory } from 'react-router';
 import { Route } from 'react-router';
 import 'antd/dist/antd.dark.less';
 import TimelineLabel from './components/pages/Incidents/Timeline/timeline';
@@ -22,8 +23,12 @@ ReactDOM.render(
 
 function App() {
   const [incidents, setIncidents] = useState([]);
+  const match = useHistory();
 
   useEffect(() => {
+    if (JSON.parse(localStorage.getItem('consent')) != true) {
+      match.push('/');
+    }
     axiosBase()
       .get('/incidents')
       .then(res => {
