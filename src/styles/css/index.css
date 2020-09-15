@@ -240,7 +240,30 @@ p {
   align-items: center;
   margin-top: 2%;
 }
-
+.close-container .close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+#timeline {
+  background-color: #14213d;
+  padding: 5%;
+}
+#timeline .ant-timeline-item-head {
+  background-color: #ffffff;
+}
+#timeline .ant-timeline-item-head-blue {
+  border: 3px solid;
+  border-color: #fca311;
+}
+#timeline .ant-timeline-item-tail {
+  border-left: 2px solid #ffffff;
+}
+@media (min-width: 992px) {
+  #timeline {
+    padding: 2%;
+  }
+}
 .googlemap {
   height: 100vh;
   width: 100%;
@@ -271,28 +294,4 @@ p {
 }
 #map-search-box {
   width: auto;
-}
-.close-container .close {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-#timeline {
-  background-color: #14213d;
-  padding: 5%;
-}
-#timeline .ant-timeline-item-head {
-  background-color: #ffffff;
-}
-#timeline .ant-timeline-item-head-blue {
-  border: 3px solid;
-  border-color: #fca311;
-}
-#timeline .ant-timeline-item-tail {
-  border-left: 2px solid #ffffff;
-}
-@media (min-width: 992px) {
-  #timeline {
-    padding: 2%;
-  }
 }

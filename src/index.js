@@ -41,11 +41,12 @@ function App() {
       </Route>
       <Route path="/map">
         <Map incidents={incidents} />
+        <ViewChange />
       </Route>
       <Route path="/timeline">
         <TimelineLabel incidents={incidents} />
+        <ViewChange />
       </Route>
-      <ViewChange />
     </>
   );
 }

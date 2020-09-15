@@ -6,13 +6,34 @@ const ViewChange = props => {
   const menu = (
     <Menu>
       <Menu.Item>
-        <Link to="/map">Map</Link>
+        <Link
+          to="/map"
+          style={{
+            color: 'black',
+          }}
+        >
+          Map
+        </Link>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/timeline">Timeline</Link>
+        <Link
+          to="/timeline"
+          style={{
+            color: 'black',
+          }}
+        >
+          Timeline
+        </Link>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/feed">Feed</Link>
+        <Link
+          to="/feed"
+          style={{
+            color: 'black',
+          }}
+        >
+          Feed
+        </Link>
       </Menu.Item>
     </Menu>
   );
@@ -23,6 +44,7 @@ const ViewChange = props => {
         <Dropdown overlay={menu} placement="topLeft">
           <Button
             style={{
+              color: 'black',
               backgroundColor: 'lightgrey',
               position: 'fixed',
               left: '2%',
