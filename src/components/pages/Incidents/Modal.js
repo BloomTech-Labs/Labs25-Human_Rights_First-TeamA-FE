@@ -17,12 +17,15 @@ const IncidentModal = props => {
   const getTweetId = url => {
     return url.split('/').pop();
   };
-
   return (
     <>
-      <p onClick={showModal}>{`${
-        props.incident.city
-      }: ${props.incident.date.slice(0, 10)}`}</p>
+      {props.modal ? (
+        <p onClick={showModal}>{`${
+          props.incident.city
+        }: ${props.incident.date.slice(0, 10)}`}</p>
+      ) : (
+        <button onClick={showModal}>View All Evidence</button>
+      )}
       <Modal
         onClick={showModal}
         closable={true}
