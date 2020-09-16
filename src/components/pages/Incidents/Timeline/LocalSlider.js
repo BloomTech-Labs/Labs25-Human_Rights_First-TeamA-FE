@@ -18,21 +18,18 @@ const LocalSlider = props => {
     return arr;
   };
   let dateArray = getDateArray(startDate, endDate);
-  console.log(dateArray);
   dateArray = dateArray.map(
     date =>
       `${date.getFullYear()}-${('0' + (date.getMonth() + 1)).slice(
         -2
       )}-${date.getDate()}`
   );
-  console.log(dateArray);
 
   function formatter(value) {
     return `${dateArray[value]}`;
   }
 
   const onSlide = value => {
-    console.log(value);
     props.setStartDate(dateArray[value[0]]);
     props.setEndDate(dateArray[value[1]]);
   };
