@@ -35,14 +35,19 @@ const LocalPopOver = props => {
   const evidence = <h3>Evidence:</h3>;
   content.unshift(evidence);
 
+  const formatDate = new Date(props.incident.date).toLocaleDateString('en-us', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+
   return (
     <>
       <Popover
         content={content}
         title={
           <div className="title-container">
-            <div>{props.incident.title}</div>{' '}
-            <div>{props.incident.date.slice(0, 10)}</div>
+            <div>{props.incident.title}</div> <div>{formatDate}</div>
           </div>
         }
         trigger="hover"
@@ -62,8 +67,7 @@ const LocalPopOver = props => {
           }
           title={
             <div className="title-container">
-              <div>{props.incident.title}</div>{' '}
-              <div>{props.incident.date.slice(0, 10)}</div>
+              <div>{props.incident.title}</div> <div>{formatDate}</div>
             </div>
           }
           trigger="click"
