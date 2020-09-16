@@ -7,30 +7,36 @@ const ViewChange = props => {
     <Menu>
       <Menu.Item>
         <Link
+          className={
+            window.location.href.includes('/map')
+              ? 'viewchange-link-active'
+              : 'viewchange-link'
+          }
           to="/map"
-          style={{
-            color: 'black',
-          }}
         >
           Map
         </Link>
       </Menu.Item>
       <Menu.Item>
         <Link
+          className={
+            window.location.href.includes('/timeline')
+              ? 'viewchange-link-active'
+              : 'viewchange-link'
+          }
           to="/timeline"
-          style={{
-            color: 'black',
-          }}
         >
           Timeline
         </Link>
       </Menu.Item>
       <Menu.Item>
         <Link
+          className={
+            window.location.href.includes('/feed')
+              ? 'viewchange-link-active'
+              : 'viewchange-link'
+          }
           to="/feed"
-          style={{
-            color: 'black',
-          }}
         >
           Feed
         </Link>
@@ -43,13 +49,11 @@ const ViewChange = props => {
       <div id="viewchangeparent">
         <Dropdown overlay={menu} placement="topLeft">
           <Button
-            style={{
-              color: 'black',
-              backgroundColor: 'lightgrey',
-              position: 'fixed',
-              left: '2%',
-              bottom: '5%',
-            }}
+            className={
+              window.location.href.includes('/timeline')
+                ? 'viewchange-button-timeline'
+                : ''
+            }
           >
             Choose Visual
           </Button>

@@ -55,7 +55,7 @@ const TimelineLabel = props => {
       </Space>
     );
   };
-  // window.screen.width >= 768
+
   return (
     <Timeline id="timeline" mode={mode}>
       {window.screen.width < 768 ? (
