@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Modal } from 'antd';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
+import Loader from 'react-loader-spinner';
 
 const IncidentModal = props => {
   const [visible, setVisible] = useState(false);
@@ -42,7 +43,20 @@ const IncidentModal = props => {
             {incident.links.map(url => (
               <>
                 {url.toLowerCase().includes('twitter') ? (
-                  <TwitterTweetEmbed tweetId={getTweetId(url)} />
+                  <div className="loader-and-tweet-embed-container">
+                    <div className="loader-container">
+                      {' '}
+                      <Loader
+                        type="Circles"
+                        color="#00BFFF"
+                        height={40}
+                        width={40}
+                      />
+                    </div>
+                    <div className="tweet-embed-container">
+                      <TwitterTweetEmbed tweetId={getTweetId(url)} />
+                    </div>
+                  </div>
                 ) : (
                   <p>{url}</p>
                 )}
