@@ -332,3 +332,39 @@ p {
   left: 2%;
   bottom: 5%;
 }
+.modal-incident-container {
+  display: flex;
+  flex-direction: column;
+}
+.modal-incident-container .modal-incident-title h2 {
+  font-size: 1.3rem;
+  text-align: center;
+  color: black;
+  margin-top: 10px;
+}
+.modal-incident-container .modal-incident-title p {
+  font-size: 1rem;
+  color: black;
+  font-weight: 500;
+}
+.modal-incident-container .incident-links-container p {
+  font-size: 1.1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+.modal-incident-container .loader-and-tweet-embed-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-incident-container .loader-and-tweet-embed-container .loader-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.modal-incident-container .loader-and-tweet-embed-container .tweet-embed-container {
+  width: 100%;
+  margin-left: -100%;
+}
