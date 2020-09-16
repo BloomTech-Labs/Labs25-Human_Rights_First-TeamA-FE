@@ -1,23 +1,17 @@
 import React, { useState } from 'react';
 import { Popover } from 'antd';
+import IncidentModal from './Modal';
+
 const orangemarker = require('../../../resources/images/orange_blue_marker.png');
 
 const LocalPopOver = props => {
   const [click, setClick] = useState(false);
-  const [hover, setHover] = useState(false);
 
   const handleHide = () => {
-    setClick(false);
-    setHover(false);
-  };
-
-  const handleHover = visible => {
-    setHover(visible);
     setClick(false);
   };
 
   const handleClick = visible => {
-    setHover(false);
     setClick(visible);
   };
 
@@ -36,53 +30,40 @@ const LocalPopOver = props => {
   content.unshift(evidence);
 
   return (
-    <>
-      <Popover
-        content={content}
-        title={
-          <div className="title-container">
-            <div>{props.incident.title}</div>{' '}
-            <div>{props.incident.date.slice(0, 10)}</div>
+    <Popover
+      zIndex={0}
+      content={
+        <div>
+          {content}
+          <div className="close-container">
+            <IncidentModal
+              incident={props.incident}
+              modal={false}
+              zIndex={2000}
+            />
+            <button onClick={handleHide} className="close">
+              Close
+            </button>
           </div>
-        }
-        trigger="hover"
-        visible={hover}
-        onVisibleChange={handleHover}
-      >
-        <Popover
-          content={
-            <div>
-              {content}
-              <div className="close-container">
-                <button onClick={handleHide} className="close">
-                  Close
-                </button>
-              </div>
-            </div>
-          }
-          title={
-            <div className="title-container">
-              <div>{props.incident.title}</div>{' '}
-              <div>{props.incident.date.slice(0, 10)}</div>
-            </div>
-          }
-          trigger="click"
-          visible={click}
-          onVisibleChange={handleClick}
-        >
-          {/* <divclassName="marker"></div> */}
-          {props.marker ? (
-            <img src={orangemarker} alt="map marker" className="marker"></img>
-          ) : null}
-          {props.text ? (
-            <p>{`${props.incident.city}: ${props.incident.date.slice(
-              0,
-              10
-            )}`}</p>
-          ) : null}
-        </Popover>
-      </Popover>
-    </>
+        </div>
+      }
+      title={
+        <div className="title-container">
+          <div>{props.incident.title}</div>{' '}
+          <div>{props.incident.date.slice(0, 10)}</div>
+        </div>
+      }
+      trigger="click"
+      visible={click}
+      onVisibleChange={handleClick}
+    >
+      {props.marker ? (
+        <img src={orangemarker} alt="map marker" className="marker"></img>
+      ) : null}
+      {props.text ? (
+        <p>{`${props.incident.city}: ${props.incident.date.slice(0, 10)}`}</p>
+      ) : null}
+    </Popover>
   );
 };
 
