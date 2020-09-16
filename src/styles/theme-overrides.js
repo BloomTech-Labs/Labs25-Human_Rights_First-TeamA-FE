@@ -18,4 +18,13 @@ module.exports = {
   '@input-placeholder-color': '#fff',
   '@box-shadow-base':
     '0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05)',
+
+  //slider overrides
+  '@slider-rail-background-color': '#fca311',
+  '@slider-track-background-color': 'white',
+  '@slider-track-background-color-hover': '#fca311',
+  '@slider-handle-color': '#fca311',
+  '@slider-handle-color-hover': 'white',
+  '@slider-handle-color-focus': 'white',
+  '@slider-handle-background-color': 'white',
 };
