@@ -11,7 +11,6 @@ class SearchBox extends Component {
   }
 
   onPlaceChanged = address => {
-    console.log(address);
     geocodeByAddress(address)
       .then(async results => {
         if (!results[0].geometry) return;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import LocalPopOver from '../LocalPopOver';
 import SearchBox from './SearchBox';
@@ -11,10 +11,7 @@ const Map = props => {
   const [apiReady, setApiReady] = useState(false);
   const [map, setMap] = useState(null);
   const [googlemaps, setGooglemaps] = useState(null);
-  const center = {
-    lat: 38,
-    lng: 267,
-  };
+
   const mapOptions = {
     fullscreenControl: false,
     styles: greystyle,

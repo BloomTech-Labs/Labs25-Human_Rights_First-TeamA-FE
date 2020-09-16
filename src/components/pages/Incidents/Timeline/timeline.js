@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Timeline, DatePicker, Space } from 'antd';
 import LocalSlider from './LocalSlider';
-import LocalPopOver from '../LocalPopOver';
+import IncidentModal from '../Modal';
 
 const TimelineLabel = props => {
   const [endDate, setEndDate] = useState('');
@@ -32,7 +32,7 @@ const TimelineLabel = props => {
       return filteredIncidents.map(incident => {
         return (
           <Timeline.Item>
-            <LocalPopOver incident={incident} marker={false} text={true} />
+            <IncidentModal incident={incident} modal={true} />
           </Timeline.Item>
         );
       });
