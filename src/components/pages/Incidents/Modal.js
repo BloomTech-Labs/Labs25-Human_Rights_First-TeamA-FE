@@ -28,6 +28,7 @@ const IncidentModal = props => {
         <button onClick={showModal}>View All Evidence</button>
       )}
       <Modal
+        destroyOnClose={true}
         onClick={showModal}
         closable={true}
         onCancel={hideModal}
