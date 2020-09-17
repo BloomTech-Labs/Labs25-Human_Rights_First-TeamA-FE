@@ -134,55 +134,40 @@ table {
   background-color: #14213d;
   height: auto;
   padding: 5px 7%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .consent-page .upper-container h1 {
   color: #fca311;
   font-size: 2rem;
-  padding-top: 3%;
-  padding-bottom: 2%;
+  margin: 0px;
+  padding: 3% 0;
 }
 .consent-page .upper-container p {
   font-size: 1.3rem;
   text-align: center;
   color: white;
+  margin: 0px;
   padding-bottom: 3%;
 }
-.consent-page .consent-container {
-  margin-top: 9%;
+.consent-page .consent-container .ant-result {
+  padding-top: 7%;
 }
-.consent-page .consent-container .ant-result-title {
-  padding-top: 1%;
-  padding-bottom: 1%;
-}
-.consent-page .consent-container .ant-result-extra {
-  padding: 4px;
-}
-.consent-page .consent-container .ant-result-icon {
-  margin-bottom: 15px;
-}
-.consent-page .consent-container .ant-card-head {
-  padding: 0;
-}
-.consent-page .consent-container .ant-card-head .ant-card-head-title {
+.consent-page .consent-container .ant-result .ant-card-head .ant-card-head-title {
   overflow: auto;
   text-align: center;
   font-size: 1.5rem;
 }
-.consent-page .consent-container .button-container {
+.consent-page .consent-container .ant-result .button-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.consent-page .consent-container .button-container .ant-btn {
+.consent-page .consent-container .ant-result .button-container .ant-btn {
   margin: 0 8px;
   color: #fca311;
   background-color: #14213d;
 }
-.consent-page .consent-container .button-container #continue-btn {
+.consent-page .consent-container .ant-result .button-container #continue-btn {
   color: white;
 }
 .marker {
