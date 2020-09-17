@@ -326,6 +326,7 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: 30px;
 }
 .modal-incident-container .loader-and-tweet-embed-container .tweet-embed-container {
   width: 100%;
