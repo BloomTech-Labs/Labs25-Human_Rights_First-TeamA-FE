@@ -9,7 +9,7 @@ context('consent', () => {
     });
     it('Should take us to Homepage', () => {
       cy.get('[data-cy=continue]').click();
-      cy.url().should('include', '/home'); // => true
+      cy.url().should('include', '/map'); // => true
     });
   });
 });

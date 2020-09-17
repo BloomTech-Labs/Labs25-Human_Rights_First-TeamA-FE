@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './styles/css/index.css';
 import { Landing } from './components/pages/Landing/index';
-import Map from './components/pages/Incidents/Map/Map';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { useHistory } from 'react-router';
 import { Route } from 'react-router';
 import 'antd/dist/antd.dark.less';
+import TimelineLabel from './components/pages/Incidents/Timeline/timeline';
+import { axiosBase } from './utils/axiosBase';
+import Map from './components/pages/Incidents/Map/Map';
+import ViewChange from './components/pages/ViewChange/viewchange';
 // import 'antd/dist/antd.less';
 
 ReactDOM.render(
@@ -18,19 +22,35 @@ ReactDOM.render(
 );
 
 function App() {
+  const [incidents, setIncidents] = useState([]);
+  const match = useHistory();
+
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem('consent')) != true) {
+      match.push('/');
+    }
+    axiosBase()
+      .get('/incidents')
+      .then(res => {
+        setIncidents(res.data.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <>
       <Route exact path="/">
         <Landing />
       </Route>
-      <Route path="/home">
-        <Map />
+      <Route path="/map">
+        <Map incidents={incidents} />
+        <ViewChange />
       </Route>
       <Route path="/timeline">
-        <div>hello</div>
-      </Route>
-      <Route path="/cards">
-        <div> card path </div>
+        <TimelineLabel incidents={incidents} />
+        <ViewChange />
       </Route>
     </>
   );
