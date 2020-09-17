@@ -126,62 +126,48 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.upper-container {
+.consent-page {
+  height: 100vh;
+}
+.consent-page .upper-container {
   text-align: center;
   background-color: #14213d;
-  height: 25%;
+  height: auto;
+  padding: 5px 7%;
 }
-.upper-container h1 {
+.consent-page .upper-container h1 {
   color: #fca311;
-  font-size: 2.2rem;
-  padding-top: 3%;
-  padding-bottom: 2%;
-}
-h1 {
   font-size: 2rem;
-  text-align: center;
-  padding: 0 25px;
+  margin: 0px;
+  padding: 3% 0;
 }
-p {
+.consent-page .upper-container p {
   font-size: 1.3rem;
   text-align: center;
   color: white;
+  margin: 0px;
   padding-bottom: 3%;
 }
-.consent-container {
-  margin-top: 15vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  padding-bottom: 25vh;
+.consent-page .consent-container .ant-result {
+  padding-top: 7%;
 }
-.consent-container h2 {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-}
-.consent-container .ant-card-head {
-  padding: 0;
-}
-.consent-container .ant-card-head .ant-card-head-title {
+.consent-page .consent-container .ant-result .ant-card-head .ant-card-head-title {
   overflow: auto;
   text-align: center;
   font-size: 1.5rem;
 }
-.consent-container .button-container {
+.consent-page .consent-container .ant-result .button-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.consent-container .button-container .ant-btn {
+.consent-page .consent-container .ant-result .button-container .ant-btn {
   margin: 0 8px;
   color: #fca311;
   background-color: #14213d;
 }
-.consent-container .button-container #continue-btn {
+.consent-page .consent-container .ant-result .button-container #continue-btn {
   color: white;
 }
 .marker {
@@ -249,6 +235,9 @@ p {
   background-color: #14213d;
   padding: 5%;
 }
+#timeline .ant-space {
+  margin-bottom: 3%;
+}
 #timeline .ant-timeline-item-head {
   background-color: #ffffff;
 }
@@ -272,6 +261,19 @@ p {
 }
 .date-range-container div {
   margin: 0 1%;
+}
+.ant-picker-cell-in-view .ant-picker-cell-inner {
+  color: #14213d;
+}
+.ant-picker-header-view {
+  color: #14213d;
+}
+.ant-picker-date-panel .ant-picker-content th {
+  color: #14213d;
+}
+.ant-picker-today-btn {
+  font-weight: 500;
+  letter-spacing: 1.5px;
 }
 .googlemap {
   height: 100vh;
@@ -366,6 +368,7 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: 30px;
 }
 .modal-incident-container .loader-and-tweet-embed-container .tweet-embed-container {
   width: 100%;
