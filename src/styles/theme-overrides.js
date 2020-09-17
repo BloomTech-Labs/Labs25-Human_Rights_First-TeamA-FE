@@ -1,5 +1,6 @@
 // #ec3944
 module.exports = {
+  '@font-family': 'sans-serif',
   '@primary-color': '#373737',
   '@link-color': '#fca311',
   '@success-color': '#52c41a',

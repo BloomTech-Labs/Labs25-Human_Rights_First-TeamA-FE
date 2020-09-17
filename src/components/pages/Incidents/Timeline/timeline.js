@@ -49,9 +49,9 @@ const TimelineLabel = props => {
 
   const newPickDate = () => {
     return (
-      <Space direction="vertical">
-        <DatePicker onChange={setStartValue} />
-        <DatePicker onChange={setEndValue} />
+      <Space direction="horizontal">
+        <DatePicker onChange={setStartValue} placeholder={'Start Date'} />
+        <DatePicker onChange={setEndValue} placeholder={'End Date'} />
       </Space>
     );
   };
