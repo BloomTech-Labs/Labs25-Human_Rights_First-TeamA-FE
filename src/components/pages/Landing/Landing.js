@@ -14,7 +14,7 @@ const Landing = () => {
     match.push('/map');
   };
   return (
-    <div>
+    <div className="consent-page">
       <div className="upper-container">
         <h1>POLICE USE OF FORCE TRACKER</h1>
         <p>Track incidents of police use of force in the United States</p>

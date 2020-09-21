@@ -6,13 +6,40 @@ const ViewChange = props => {
   const menu = (
     <Menu>
       <Menu.Item>
-        <Link to="/map">Map</Link>
+        <Link
+          className={
+            window.location.href.includes('/map')
+              ? 'viewchange-link-active'
+              : 'viewchange-link'
+          }
+          to="/map"
+        >
+          Map
+        </Link>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/timeline">Timeline</Link>
+        <Link
+          className={
+            window.location.href.includes('/timeline')
+              ? 'viewchange-link-active'
+              : 'viewchange-link'
+          }
+          to="/timeline"
+        >
+          Timeline
+        </Link>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/feed">Feed</Link>
+        <Link
+          className={
+            window.location.href.includes('/feed')
+              ? 'viewchange-link-active'
+              : 'viewchange-link'
+          }
+          to="/feed"
+        >
+          Feed
+        </Link>
       </Menu.Item>
     </Menu>
   );
@@ -22,12 +49,11 @@ const ViewChange = props => {
       <div id="viewchangeparent">
         <Dropdown overlay={menu} placement="topLeft">
           <Button
-            style={{
-              backgroundColor: 'lightgrey',
-              position: 'fixed',
-              left: '2%',
-              bottom: '5%',
-            }}
+            className={
+              window.location.href.includes('/timeline')
+                ? 'viewchange-button-timeline'
+                : ''
+            }
           >
             Choose Visual
           </Button>

@@ -5,6 +5,7 @@ import AutoComplete from './Autocomplete';
 const SearchBox = props => {
   const [address, setAddress] = useState('');
 
+
   const onPlaceChanged = address => {
     geocodeByAddress(address)
       .then(async results => {
