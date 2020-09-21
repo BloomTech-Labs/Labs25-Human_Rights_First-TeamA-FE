@@ -18,7 +18,7 @@ const LocalPopOver = props => {
   const linkStore = () => {
     if (props.incident.links.length > 0) {
       return props.incident.links.map(link => (
-        <div className="evidence">
+        <div className="evidence" key={`link-${link}`}>
           {' '}
           <a href={link}>{link} </a>
         </div>
@@ -26,7 +26,7 @@ const LocalPopOver = props => {
     }
   };
   let content = linkStore();
-  const evidence = <h3>Evidence:</h3>;
+  const evidence = <h3 key={`evidence-${props.incident.id}`}>Evidence:</h3>;
   content.unshift(evidence);
 
   const formatDate = new Date(props.incident.date).toLocaleDateString('en-us', {

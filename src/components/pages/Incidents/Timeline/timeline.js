@@ -32,8 +32,12 @@ const TimelineLabel = () => {
     if (filteredIncidents.length > 0) {
       return filteredIncidents.map(incident => {
         return (
-          <Timeline.Item>
-            <IncidentModal incident={incident} modal={true} />
+          <Timeline.Item key={`timelineItem-${incident.id}`}>
+            <IncidentModal
+              key={`modal-${incident.id}`}
+              incident={incident}
+              modal={true}
+            />
           </Timeline.Item>
         );
       });

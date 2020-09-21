@@ -5,8 +5,6 @@ import LocalPopOver from '../LocalPopOver';
 import SearchBox from './SearchBox';
 import greystyle from './snazzymapGreyscale';
 
-import { v4 as uuidv4 } from 'uuid';
-
 const Map = () => {
   const incidents = useContext(IncidentContext);
   const [apiReady, setApiReady] = useState(false);
@@ -40,7 +38,7 @@ const Map = () => {
     createMarkers = incidents.map(incident => {
       return (
         <LocalPopOver
-          key={uuidv4()}
+          key={`popover-${incident.id}`}
           lat={incident.geocoding.lat}
           lng={incident.geocoding.long}
           incident={incident}
