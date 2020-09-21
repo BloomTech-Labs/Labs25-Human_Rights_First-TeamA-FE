@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { IncidentContext } from '../../../../state/contexts/index';
 import { Timeline, DatePicker, Space } from 'antd';
 import LocalSlider from './LocalSlider';
 import IncidentModal from '../Modal';
 
-const TimelineLabel = props => {
+const TimelineLabel = () => {
   const [endDate, setEndDate] = useState('');
   const [startDate, setStartDate] = useState('');
   let mode = 'left';
-  const incidents = props.incidents;
+  const incidents = useContext(IncidentContext);
   const [filteredIncidents, setFilteredIncidents] = useState(incidents);
   if (window.screen.width >= 768) {
     mode = 'alternate';
