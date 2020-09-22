@@ -29,6 +29,7 @@ module.exports = {
   '@slider-handle-color-hover': 'white',
   '@slider-handle-color-focus': 'white',
   '@slider-handle-background-color': 'white',
+  '@slider-margin': '15px 15px 00px',
   // modal overrides
   '@modal-close-color': 'black',
 };
