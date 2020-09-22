@@ -343,23 +343,32 @@ table {
 }
 .modal-incident-container .modal-incident-title h2 {
   font-size: 1.3rem;
-  text-align: center;
+  text-align: left;
   color: black;
-  margin-top: 10px;
 }
 .modal-incident-container .modal-incident-title p {
   font-size: 1rem;
   color: black;
   font-weight: 500;
+  margin-bottom: 25px;
 }
-.modal-incident-container .incident-links-container p {
+.modal-incident-container .incident-links-container #evidence-link {
+  border-top: 4px solid #b4b4b4;
+}
+.modal-incident-container .incident-links-container #evidence-link p {
   font-size: 1.1rem;
-  border: 1px solid black;
+  border: 1px solid #ccd6dd;
   border-radius: 10px;
+  padding: 5px;
+  margin-top: 25px;
   background-color: white;
+}
+.modal-incident-container .incident-links-container #evidence-link p a {
+  text-decoration: none;
   color: black;
 }
 .modal-incident-container .loader-and-tweet-embed-container {
+  border-top: 4px solid #b4b4b4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -368,9 +377,9 @@ table {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 30px;
 }
 .modal-incident-container .loader-and-tweet-embed-container .tweet-embed-container {
+  margin: 20px 0px;
   width: 100%;
   margin-left: -100%;
 }
