@@ -343,7 +343,7 @@ table {
 }
 .modal-incident-container .modal-incident-title h2 {
   font-size: 1.3rem;
-  text-align: center;
+  text-align: left;
   color: black;
   margin-top: 10px;
 }
@@ -354,9 +354,13 @@ table {
 }
 .modal-incident-container .incident-links-container p {
   font-size: 1.1rem;
-  border: 1px solid black;
+  border: 1px solid #ccd6dd;
   border-radius: 10px;
+  padding: 5px;
   background-color: white;
+}
+.modal-incident-container .incident-links-container p a {
+  text-decoration: none;
   color: black;
 }
 .modal-incident-container .loader-and-tweet-embed-container {
@@ -368,7 +372,6 @@ table {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 30px;
 }
 .modal-incident-container .loader-and-tweet-embed-container .tweet-embed-container {
   width: 100%;

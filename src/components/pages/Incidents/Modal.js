@@ -63,7 +63,9 @@ const IncidentModal = props => {
                     </div>
                   </div>
                 ) : (
-                  <p>{url}</p>
+                  <p>
+                    <a href={url}>{url}</a>
+                  </p>
                 )}
               </div>
             ))}
