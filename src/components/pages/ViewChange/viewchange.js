@@ -29,18 +29,6 @@ const ViewChange = props => {
           Timeline
         </Link>
       </Menu.Item>
-      <Menu.Item>
-        <Link
-          className={
-            window.location.href.includes('/feed')
-              ? 'viewchange-link-active'
-              : 'viewchange-link'
-          }
-          to="/feed"
-        >
-          Feed
-        </Link>
-      </Menu.Item>
     </Menu>
   );
 
