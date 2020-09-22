@@ -1,13 +1,11 @@
 import React from 'react';
-import { Slider, Switch } from 'antd';
+import { Slider } from 'antd';
 
 const LocalSlider = props => {
   const startDate = new Date('2020-08-22T00:00');
   const endDate = new Date('2020-08-31T00:00');
-  const setStartDate = props.setStartDate;
-  const setEndDate = props.setEndDate;
   var getDateArray = function(start, end) {
-    var arr = new Array(),
+    var arr = [],
       dt = new Date(start);
 
     while (dt <= end) {
@@ -26,7 +24,11 @@ const LocalSlider = props => {
   );
 
   function formatter(value) {
-    return `${dateArray[value]}`;
+    return new Date(dateArray[value]).toLocaleDateString('en-us', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
   }
 
   const onSlide = value => {
@@ -39,20 +41,30 @@ const LocalSlider = props => {
       <div className="date-range-container">
         <div>
           {props.startDate
-            ? props.startDate
-            : `${startDate.getFullYear()}-${(
-                '0' +
-                (startDate.getMonth() + 1)
-              ).slice(-2)}-${startDate.getDate()}`}
+            ? new Date(props.startDate).toLocaleDateString('en-us', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })
+            : new Date(startDate).toLocaleDateString('en-us', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })}
         </div>
         <div> - </div>
         <div>
           {props.endDate
-            ? props.endDate
-            : `${endDate.getFullYear()}-${(
-                '0' +
-                (endDate.getMonth() + 1)
-              ).slice(-2)}-${endDate.getDate()}`}
+            ? new Date(props.endDate).toLocaleDateString('en-us', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })
+            : new Date(endDate).toLocaleDateString('en-us', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })}
         </div>
       </div>
       <Slider

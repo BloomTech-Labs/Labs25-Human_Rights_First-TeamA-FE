@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
-import './styles/css/index.css';
-import { Landing } from './components/pages/Landing/index';
+import { useHistory, Route } from 'react-router';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { useHistory } from 'react-router';
-import { Route } from 'react-router';
-import 'antd/dist/antd.dark.less';
-import TimelineLabel from './components/pages/Incidents/Timeline/timeline';
+import { Landing } from './components/pages/Landing/index';
 import { axiosBase } from './utils/axiosBase';
+import { IncidentContext } from './state/contexts/index';
+import TimelineLabel from './components/pages/Incidents/Timeline/timeline';
 import Map from './components/pages/Incidents/Map/Map';
 import ViewChange from './components/pages/ViewChange/viewchange';
-// import 'antd/dist/antd.less';
+import './styles/css/index.css';
+import 'antd/dist/antd.dark.less';
 
 ReactDOM.render(
   <Router>
@@ -26,7 +25,7 @@ function App() {
   const match = useHistory();
 
   useEffect(() => {
-    if (JSON.parse(localStorage.getItem('consent')) != true) {
+    if (JSON.parse(localStorage.getItem('consent')) !== true) {
       match.push('/');
     }
     axiosBase()
@@ -37,21 +36,23 @@ function App() {
       .catch(err => {
         console.log(err);
       });
-  }, []);
+  }, [match]);
 
   return (
     <>
-      <Route exact path="/">
-        <Landing />
-      </Route>
-      <Route path="/map">
-        <Map incidents={incidents} />
-        <ViewChange />
-      </Route>
-      <Route path="/timeline">
-        <TimelineLabel incidents={incidents} />
-        <ViewChange />
-      </Route>
+      <IncidentContext.Provider value={incidents}>
+        <Route exact path="/">
+          <Landing />
+        </Route>
+        <Route path="/map">
+          <Map />
+          <ViewChange />
+        </Route>
+        <Route path="/timeline">
+          <TimelineLabel />
+          <ViewChange />
+        </Route>
+      </IncidentContext.Provider>
     </>
   );
 }

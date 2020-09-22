@@ -8,7 +8,7 @@ const Landing = () => {
     if (JSON.parse(localStorage.getItem('consent')) === true) {
       match.push('/map');
     }
-  }, []);
+  }, [match]);
   const accept = () => {
     localStorage.setItem('consent', JSON.stringify(true));
     match.push('/map');

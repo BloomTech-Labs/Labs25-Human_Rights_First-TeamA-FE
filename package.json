@@ -20,8 +20,7 @@
     "react-plotly.js": "^2.4.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-twitter-embed": "^3.0.3",
-    "uuid": "^8.3.0"
+    "react-twitter-embed": "^3.0.3"
   },
   "scripts": {
     "start": "craco --max_old_space_size=4096 start",

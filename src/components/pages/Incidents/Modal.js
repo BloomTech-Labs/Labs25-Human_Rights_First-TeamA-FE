@@ -34,6 +34,7 @@ const IncidentModal = props => {
         </button>
       )}
       <Modal
+        destroyOnClose={true}
         onClick={showModal}
         closable={true}
         onCancel={hideModal}
@@ -47,7 +48,7 @@ const IncidentModal = props => {
           </div>
           <div className="incident-links-container">
             {incident.links.map(url => (
-              <>
+              <div key={`modal-${url}`}>
                 {url.toLowerCase().includes('twitter') ? (
                   <div className="loader-and-tweet-embed-container">
                     <div className="loader-container">
@@ -67,11 +68,10 @@ const IncidentModal = props => {
                 ) : (
                   <p>{url}</p>
                 )}
-              </>
+              </div>
             ))}
           </div>
         </div>
-        <TwitterTweetEmbed />
       </Modal>
     </>
   );

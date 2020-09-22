@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { IncidentContext } from '../../../../state/contexts/index';
 import GoogleMapReact from 'google-map-react';
 import LocalPopOver from '../LocalPopOver';
 import SearchBox from './SearchBox';
 import greystyle from './snazzymapGreyscale';
 
-import { v4 as uuidv4 } from 'uuid';
-
-const Map = props => {
-  const incidents = props.incidents;
+const Map = () => {
+  const incidents = useContext(IncidentContext);
   const [apiReady, setApiReady] = useState(false);
   const [map, setMap] = useState(null);
   const [googlemaps, setGooglemaps] = useState(null);
@@ -39,7 +38,7 @@ const Map = props => {
     createMarkers = incidents.map((incident, index) => {
       return (
         <LocalPopOver
-          key={uuidv4()}
+          key={`popover-${incident.id}`}
           lat={incident.geocoding.lat}
           lng={incident.geocoding.long}
           incident={incident}

@@ -253,6 +253,15 @@ table {
     padding: 2%;
   }
 }
+.date-range-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.date-range-container div {
+  margin: 0 1%;
+}
 .ant-picker-cell-in-view .ant-picker-cell-inner {
   color: #14213d;
 }
