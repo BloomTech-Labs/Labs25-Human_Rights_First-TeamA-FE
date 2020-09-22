@@ -19,6 +19,7 @@ const ViewChange = props => {
       </Menu.Item>
       <Menu.Item>
         <Link
+          data-cy="timeline"
           className={
             window.location.href.includes('/timeline')
               ? 'viewchange-link-active'
@@ -37,6 +38,7 @@ const ViewChange = props => {
       <div id="viewchangeparent">
         <Dropdown overlay={menu} placement="topLeft">
           <Button
+            data-cy="choose-visual"
             className={
               window.location.href.includes('/timeline')
                 ? 'viewchange-button-timeline'

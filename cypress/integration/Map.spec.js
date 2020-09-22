@@ -6,12 +6,12 @@ context('map', () => {
   });
   describe('Testing map component', function (){
       it('Should be able to view a twitter feed', () => {
-        cy.visit('http://localhost:3000/');
         cy.get('[data-cy=continue]').click();
         cy.get('[data-cy=map-marker-4]').click({force: true});
         cy.get('[data-cy=view-evidence]').click();
         cy.get('[aria-busy="true"]');
-        cy.get('.css-1dbjc4n').click();
+        cy.get('[data-icon="close"]').click();
+        cy.get('.close').click();
       })
   })
 });

@@ -55,8 +55,16 @@ const TimelineLabel = () => {
   const newPickDate = () => {
     return (
       <Space direction="horizontal">
-        <DatePicker onChange={setStartValue} placeholder={'Start Date'} />
-        <DatePicker onChange={setEndValue} placeholder={'End Date'} />
+        <DatePicker
+          onChange={setStartValue}
+          placeholder={'Start Date'}
+          data-cy="start-date"
+        />
+        <DatePicker
+          onChange={setEndValue}
+          placeholder={'End Date'}
+          data-cy="end-date"
+        />
       </Space>
     );
   };
