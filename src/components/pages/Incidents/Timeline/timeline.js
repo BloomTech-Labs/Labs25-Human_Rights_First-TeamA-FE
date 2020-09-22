@@ -18,8 +18,11 @@ const TimelineLabel = () => {
     if (startDate && endDate) {
       const results = incidents.filter(el => {
         const d = Date.parse(el.date);
-        const start = Date.parse(startDate);
-        const end = Date.parse(endDate);
+        const start = new Date(startDate);
+        const end = new Date(endDate);
+        start.setDate(start.getDate() + 1);
+        end.setDate(end.getDate() + 1);
+
         return d >= start && d <= end;
       });
       setFilteredIncidents(results);
