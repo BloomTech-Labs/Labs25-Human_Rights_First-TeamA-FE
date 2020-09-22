@@ -1,13 +1,11 @@
 import React from 'react';
-import { Slider, Switch } from 'antd';
+import { Slider } from 'antd';
 
 const LocalSlider = props => {
   const startDate = new Date('2020-08-22T00:00');
   const endDate = new Date('2020-08-31T00:00');
-  const setStartDate = props.setStartDate;
-  const setEndDate = props.setEndDate;
   var getDateArray = function(start, end) {
-    var arr = new Array(),
+    var arr = [],
       dt = new Date(start);
 
     while (dt <= end) {
