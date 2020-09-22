@@ -25,7 +25,7 @@ function App() {
   const match = useHistory();
 
   useEffect(() => {
-    if (JSON.parse(localStorage.getItem('consent')) != true) {
+    if (JSON.parse(localStorage.getItem('consent')) !== true) {
       match.push('/');
     }
     axiosBase()
@@ -36,7 +36,7 @@ function App() {
       .catch(err => {
         console.log(err);
       });
-  }, []);
+  }, [match]);
 
   return (
     <>
