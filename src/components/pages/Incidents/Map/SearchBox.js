@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Form, Row, Col } from 'antd';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import AutoComplete from './Autocomplete';
+
 const SearchBox = props => {
   const [address, setAddress] = useState('');
-
 
   const onPlaceChanged = address => {
     geocodeByAddress(address)

@@ -25,6 +25,7 @@ function App() {
   const match = useHistory();
 
   useEffect(() => {
+    // Fetching consent token before progressing with fetching data.
     if (JSON.parse(localStorage.getItem('consent')) !== true) {
       match.push('/');
     }

@@ -2,6 +2,12 @@ import { Input } from 'antd';
 import React, { useState, useEffect } from 'react';
 import PlacesAutocomplete from 'react-places-autocomplete';
 
+/**
+ * Custom autocomplete component used for Searchbox found at:
+ * https://gist.github.com/PTKC/7ba3fbdc1d7faa2bfcb846d6dac2491e
+ *
+ */
+
 const AutoComplete = props => {
   const [address, setAddress] = useState(props.address);
   const options = {
