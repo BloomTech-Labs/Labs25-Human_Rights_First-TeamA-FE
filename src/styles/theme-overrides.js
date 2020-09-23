@@ -1,4 +1,5 @@
-// #ec3944
+// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+
 module.exports = {
   '@font-family': 'times new roman, serif;',
   '@primary-color': '#373737',

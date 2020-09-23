@@ -7,13 +7,16 @@ import IncidentModal from '../Modal';
 const TimelineLabel = () => {
   const [endDate, setEndDate] = useState('');
   const [startDate, setStartDate] = useState('');
-  let mode = 'left';
   const incidents = useContext(IncidentContext);
   const [filteredIncidents, setFilteredIncidents] = useState(incidents);
+
+  // timeline item alignment based on screen width
+  let mode = 'left';
   if (window.screen.width >= 768) {
     mode = 'alternate';
   }
 
+  // filters incidents based on start and end date of datepickers
   useEffect(() => {
     if (startDate && endDate) {
       const results = incidents.filter(el => {
@@ -39,7 +42,7 @@ const TimelineLabel = () => {
             <IncidentModal
               key={`modal-${incident.id}`}
               incident={incident}
-              modal={true}
+              timeline={true}
             />
           </Timeline.Item>
         );
@@ -47,11 +50,11 @@ const TimelineLabel = () => {
     }
   };
 
-  const setStartValue = (value, dateString) => {
+  const setStartValue = (_, dateString) => {
     setStartDate(dateString);
   };
 
-  const setEndValue = (value, dateString) => {
+  const setEndValue = (_, dateString) => {
     setEndDate(dateString);
   };
 

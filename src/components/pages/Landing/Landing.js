@@ -4,11 +4,13 @@ import { useHistory } from 'react-router';
 import { Result, Button } from 'antd';
 const Landing = () => {
   const match = useHistory();
+  // If token already exists route to map
   useEffect(() => {
     if (JSON.parse(localStorage.getItem('consent')) === true) {
       match.push('/map');
     }
   }, [match]);
+  // Adds token on accept and routes to map
   const accept = () => {
     localStorage.setItem('consent', JSON.stringify(true));
     match.push('/map');

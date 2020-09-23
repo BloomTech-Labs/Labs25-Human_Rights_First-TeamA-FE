@@ -1,3 +1,7 @@
+/* Styling used for Google Maps: https://developers.google.com/maps/documentation/maps-static/styling
+ * Further styling examples found: https://snazzymaps.com/style/15/subtle-grayscale
+ */
+
 const greystyle = [
   {
     featureType: 'administrative',

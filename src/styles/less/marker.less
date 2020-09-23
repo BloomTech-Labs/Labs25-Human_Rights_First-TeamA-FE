@@ -1,9 +1,16 @@
+@import 'variables';
+
 .marker {
   position: absolute;
   height: 40px;
   width: 30px;
   left: -10px;
   top: -30px;
+}
+
+.title-container {
+  .flexDisplay(row, space-between, center);
+
 }
 
 .evidence {
@@ -41,22 +48,24 @@
     }
 
     div {
-      color: #14213d;
+      color: @backgroundColor;
     }
   }
-  .ant-popover-inner-content {
-    font-size: 1.05rem;
-
-    h3 {
-      color: #14213d;
-      letter-spacing: 0.5px;
-    }
-
-    .evidence a {
-      color: #14213d;
-      letter-spacing: 0.5px;
-    }
+}
+.ant-popover-inner-content {
+  font-size: 1.05rem;
+  
+  h3 {
+    color: @backgroundColor;
+    letter-spacing: 0.5px;
   }
+
+  .evidence a {
+    color: @backgroundColor;
+    letter-spacing: 0.5px;
+  }
+}
+
   .close-container {
     width: 100%;
     .flexDisplay(row, center, center);

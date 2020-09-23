@@ -164,11 +164,11 @@ table {
 }
 .consent-page .consent-container .ant-result .button-container .ant-btn {
   margin: 0 8px;
-  color: #fca311;
+  color: white;
   background-color: #14213d;
 }
 .consent-page .consent-container .ant-result .button-container #continue-btn {
-  color: white;
+  color: #fca311;
 }
 .marker {
   position: absolute;
@@ -250,14 +250,22 @@ table {
   margin-bottom: 3%;
 }
 #timeline .ant-timeline-item-head {
-  background-color: #ffffff;
+  background-color: white;
 }
 #timeline .ant-timeline-item-head-blue {
   border: 3px solid;
   border-color: #fca311;
 }
 #timeline .ant-timeline-item-tail {
-  border-left: 2px solid #ffffff;
+  border-left: 2px solid white;
+}
+#timeline .ant-timeline-item-content {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+#timeline .ant-timeline-item-content {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
 }
 #timeline .ant-timeline-item-content {
   font-size: 1.1rem;
