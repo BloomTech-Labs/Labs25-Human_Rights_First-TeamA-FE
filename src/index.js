@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Landing } from './components/pages/Landing/index';
 import { axiosBase } from './utils/axiosBase';
 import { IncidentContext } from './state/contexts/index';
-import TimelineLabel from './components/pages/Incidents/Timeline/timeline';
+import TimelineLabel from './components/pages/Incidents/Timeline/Timeline';
 import Map from './components/pages/Incidents/Map/Map';
 import ViewChange from './components/pages/ViewChange/viewchange';
 import './styles/css/index.css';

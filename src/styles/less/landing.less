@@ -1,14 +1,16 @@
+@import 'variables';
+
 .consent-page {
   height: 100vh;
 
   .upper-container {
     text-align: center;
-    background-color: #14213d;
+    background-color: @backgroundColor;
     height: auto;
     padding: 5px 7%;
 
     h1 {
-      color: #fca311;
+      color: @secondaryColor;
       font-size: 2rem;
       margin: 0px;
       padding: 3% 0;
@@ -16,7 +18,7 @@
     p {
       font-size: 1.3rem;
       text-align: center;
-      color: white;
+      color: @white;
       margin: 0px;
       padding-bottom: 3%;
     }
@@ -38,11 +40,11 @@
         .flexDisplay(row, center, center);
         .ant-btn {
           margin: 0 8px;
-          color: white;
-          background-color: #14213d;
+          color: @white;
+          background-color: @backgroundColor;
         }
         #continue-btn {
-          color: #fca311;
+          color: @secondaryColor;
         }
       }
     }

@@ -1,5 +1,7 @@
+@import 'variables';
+
 #timeline {
-  background-color: #14213d;
+  background-color: @backgroundColor;
   padding: 5%;
 
   .ant-space {
@@ -7,16 +9,26 @@
   }
 
   .ant-timeline-item-head {
-    background-color: #ffffff;
+    background-color: @white;
   }
 
   .ant-timeline-item-head-blue {
     border: 3px solid;
-    border-color: #fca311;
+    border-color: @secondaryColor;
   }
 
   .ant-timeline-item-tail {
-    border-left: 2px solid #ffffff;
+    border-left: 2px solid @white;
+  }
+
+  .ant-timeline-item-content {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .ant-timeline-item-content {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
   }
 
   @media @large {
@@ -24,22 +36,22 @@
   }
 }
 
-.date-range-container{
+.date-range-container {
   .flexDisplay(row, center, center);
-  div{
+  div {
     margin: 0 1%;
   }
 }
 .ant-picker-cell-in-view .ant-picker-cell-inner {
-  color: #14213d;
+  color: @backgroundColor;
 }
 
 .ant-picker-header-view {
-  color: #14213d;
+  color: @backgroundColor;
 }
 
 .ant-picker-date-panel .ant-picker-content th {
-  color: #14213d;
+  color: @backgroundColor;
 }
 
 .ant-picker-today-btn {

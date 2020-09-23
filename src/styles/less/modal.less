@@ -1,3 +1,5 @@
+@import 'variables';
+
 .modal-incident-container {
   display: flex;
   flex-direction: column;
@@ -6,12 +8,12 @@
     h2 {
       font-size: 1.3rem;
       text-align: left;
-      color: black;
+      color: @black;
     }
 
     p {
       font-size: 1rem;
-      color: black;
+      color: @black;
       font-weight: 500;
       margin-bottom: 25px;
     }
@@ -19,7 +21,7 @@
 
   .incident-links-container {
     #evidence-link {
-      border-top: 4px solid rgb(180, 180, 180);
+      border-top: 4px solid @lightGrey;
 
       p {
         font-size: 1.1rem;
@@ -27,16 +29,16 @@
         border-radius: 10px;
         padding: 5px;
         margin-top: 25px;
-        background-color: white;
+        background-color: @white;
         a {
           text-decoration: none;
-          color: black;
+          color: @black;
         }
       }
     }
   }
   .loader-and-tweet-embed-container {
-    border-top: 4px solid rgb(180, 180, 180);
+    border-top: 4px solid @lightGrey;
     display: flex;
     align-items: center;
     justify-content: center;

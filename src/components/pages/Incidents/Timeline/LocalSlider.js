@@ -1,9 +1,13 @@
 import React from 'react';
 import { Slider } from 'antd';
 
+// https://ant.design/components/slider/
+
 const LocalSlider = props => {
   const startDate = new Date('2020-08-22T00:00');
   const endDate = new Date('2020-08-31T00:00');
+
+  // creates date increments for slider
   var getDateArray = function(start, end) {
     var arr = [],
       dt = new Date(start);
