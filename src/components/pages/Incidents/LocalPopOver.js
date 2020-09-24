@@ -58,19 +58,12 @@ const LocalPopOver = props => {
           <div>{props.incident.title}</div> <div>{formatDate}</div>
         </div>
       }
-      trigger="click"
+      trigger={['click']}
+      overlay={'menu'}
       visible={click}
       onVisibleChange={handleClick}
     >
-      {props.marker ? (
-        <img
-          src={orangemarker}
-          alt="map marker"
-          className="marker"
-          data-cy={`map-marker-${props.index}`}
-        ></img>
-      ) : null}
-      {props.text ? <p>{`${props.incident.city}: ${formatDate}`}</p> : null}
+      <img data-cy={`map-marker-${props.index}`} src={orangemarker} alt="map marker" className="marker"></img>
     </Popover>
   );
 };

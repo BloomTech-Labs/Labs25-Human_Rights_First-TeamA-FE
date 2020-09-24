@@ -1,15 +1,16 @@
+@import 'variables';
+
 .marker {
   position: absolute;
   height: 40px;
   width: 30px;
   left: -10px;
   top: -30px;
-  // background-color: red;
-  // border-radius: 20px;
 }
 
 .title-container {
   .flexDisplay(row, space-between, center);
+
 }
 
 .evidence {
@@ -19,6 +20,7 @@
 }
 
 .ant-popover {
+  letter-spacing: 0.5px;
   width: 70%;
 
   @media @medium {
@@ -35,28 +37,43 @@
 
   .ant-popover-title {
     text-align: center;
+
+    .title-container {
+      .flexDisplay(row, space-between, center);
+      div {
+        font-weight: 600;
+        font-size: 1.05rem;
+        margin: 0px 10px;
+      }
+    }
+
     div {
-      color: #14213d;
+      color: @backgroundColor;
     }
   }
 }
 .ant-popover-inner-content {
+  font-size: 1.05rem;
+  
   h3 {
-    color: #14213d;
+    color: @backgroundColor;
+    letter-spacing: 0.5px;
   }
 
   .evidence a {
-    color: #14213d;
+    color: @backgroundColor;
+    letter-spacing: 0.5px;
   }
 }
 
-.close-container {
-  width: 100%;
-  .flexDisplay(row, center, center);
-  margin-top: 2%;
-  .close {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  .close-container {
+    width: 100%;
+    .flexDisplay(row, center, center);
+    margin-top: 2%;
+    .close {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
   }
 }

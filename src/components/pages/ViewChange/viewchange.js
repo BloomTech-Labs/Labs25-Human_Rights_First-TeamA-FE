@@ -2,7 +2,7 @@ import React from 'react';
 import { Menu, Dropdown, Button } from 'antd';
 import { Link } from 'react-router-dom';
 
-const ViewChange = props => {
+const ViewChange = () => {
   const menu = (
     <Menu>
       <Menu.Item>
@@ -36,7 +36,7 @@ const ViewChange = props => {
   return (
     <>
       <div id="viewchangeparent">
-        <Dropdown overlay={menu} placement="topLeft">
+        <Dropdown overlay={menu} trigger={['click']} placement="topLeft">
           <Button
             data-cy="choose-visual"
             className={

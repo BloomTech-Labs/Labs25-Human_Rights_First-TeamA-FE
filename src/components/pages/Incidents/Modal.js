@@ -21,12 +21,15 @@ const IncidentModal = props => {
     setVisible(false);
   };
 
+  // example: https://twitter.com/hungrybowtie/status/1277159562563317760 = 1277159562563317760
   const getTweetId = url => {
     return url.split('/').pop();
   };
+
   return (
     <>
-      {props.modal ? (
+      {/* check for timeline vs popover view */}
+      {props.timeline ? (
         <p onClick={showModal}>{`${props.incident.city}: ${formatDate}`}</p>
       ) : (
         <button data-cy="view-evidence" onClick={showModal}>
@@ -47,6 +50,7 @@ const IncidentModal = props => {
             <p>{formatDate}</p>
           </div>
           <div className="incident-links-container">
+            {/* TODO: link should be a separate component */}
             {incident.links.map(url => (
               <div key={`modal-${url}`}>
                 {url.toLowerCase().includes('twitter') ? (
@@ -66,7 +70,11 @@ const IncidentModal = props => {
                     </div>
                   </div>
                 ) : (
-                  <p>{url}</p>
+                  <div id="evidence-link">
+                    <p>
+                      <a href={url}>{url}</a>
+                    </p>
+                  </div>
                 )}
               </div>
             ))}

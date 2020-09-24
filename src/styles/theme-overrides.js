@@ -1,6 +1,7 @@
-// #ec3944
+// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+
 module.exports = {
-  '@font-family': 'sans-serif',
+  '@font-family': 'times new roman, serif;',
   '@primary-color': '#373737',
   '@link-color': '#fca311',
   '@success-color': '#52c41a',
@@ -29,6 +30,7 @@ module.exports = {
   '@slider-handle-color-hover': 'white',
   '@slider-handle-color-focus': 'white',
   '@slider-handle-background-color': 'white',
+  '@slider-margin': '15px 15px 30px',
   // modal overrides
   '@modal-close-color': 'black',
 };

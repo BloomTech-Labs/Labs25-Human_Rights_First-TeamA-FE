@@ -5,6 +5,14 @@ import LocalPopOver from '../LocalPopOver';
 import SearchBox from './SearchBox';
 import greystyle from './snazzymapGreyscale';
 
+/**
+ * This map uses the google-map-react library which is built on the Google Maps API.
+ * https://github.com/google-map-react/google-map-react#use-google-maps-api
+ * Requires Google Maps API key including: "Places", "Geocoding", "Maps" and "JavaScript" apis.
+ * Subscription to apis is available through the Google Maps Api api key dashboard.
+ * https://developers.google.com/maps/documentation/javascript/get-api-key
+ */
+
 const Map = () => {
   const incidents = useContext(IncidentContext);
   const [apiReady, setApiReady] = useState(false);
@@ -24,7 +32,7 @@ const Map = () => {
   if (window.screen.width >= 1200) {
     zoom = 5;
   }
-
+  // Required by Google Maps API to initiate map
   const handleApiLoaded = (map, maps) => {
     if (map && maps) {
       setApiReady(true);
@@ -32,7 +40,7 @@ const Map = () => {
       setGooglemaps(maps);
     }
   };
-
+  // Create markers for map
   let createMarkers;
   if (incidents.length > 0) {
     createMarkers = incidents.map((incident, index) => {
@@ -59,6 +67,7 @@ const Map = () => {
         }}
         defaultCenter={{ lat: 38, lng: 267 }}
         defaultZoom={zoom}
+        gestureHandling={'greedy'}
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
         options={mapOptions}
