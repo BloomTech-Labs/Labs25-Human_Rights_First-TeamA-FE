@@ -321,7 +321,6 @@ table {
 @media (min-width: 768px) {
   .autocomplete-search {
     margin: 0 auto;
-    padding: 0 1%;
     justify-content: left;
     width: 100%;
   }
