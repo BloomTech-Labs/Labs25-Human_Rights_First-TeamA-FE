@@ -9,7 +9,6 @@
     "antd": "^4.4.3",
     "axios": "^0.19.2",
     "craco-less": "^1.17.0",
-    "eslint": "^7.7.0",
     "google-map-react": "^2.0.8",
     "less": "^3.12.2",
     "plotly.js": "^1.54.6",
@@ -38,7 +37,10 @@
     "extends": "react-app"
   },
   "lint-staged": {
-    "src/**/*.js": ["eslint --fix", "prettier-eslint --write"]
+    "src/**/*.js": [
+      "eslint --fix",
+      "prettier-eslint --write"
+    ]
   },
   "husky": {
     "hooks": {
@@ -46,14 +48,20 @@
     }
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.js"],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/stories/",
       "<rootDir>/node_modules/"
     ]
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
