@@ -32,7 +32,9 @@ const IncidentModal = props => {
       {props.timeline ? (
         <p onClick={showModal}>{`${props.incident.city}: ${formatDate}`}</p>
       ) : (
-        <button onClick={showModal}>View All Evidence</button>
+        <button data-cy="view-evidence" onClick={showModal}>
+          View All Evidence
+        </button>
       )}
       <Modal
         destroyOnClose={true}
@@ -60,6 +62,7 @@ const IncidentModal = props => {
                         color="#00BFFF"
                         height={40}
                         width={40}
+                        data-cy="loader"
                       />
                     </div>
                     <div className="tweet-embed-container">

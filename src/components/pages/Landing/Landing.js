@@ -27,10 +27,15 @@ const Landing = () => {
           title="THIS SITE CONTAINS IMAGES OF GRAPHIC VIOLENCE"
           extra={
             <div className="button-container">
-              <a href="https://www.humanrightsfirst.org/">
+              <a href="https://www.humanrightsfirst.org/" data-cy="abandon">
                 <Button type="primary">Abandon</Button>
               </a>
-              <Button id="continue-btn" type="primary" onClick={accept}>
+              <Button
+                id="continue-btn"
+                type="primary"
+                data-cy="continue"
+                onClick={accept}
+              >
                 Continue
               </Button>
             </div>

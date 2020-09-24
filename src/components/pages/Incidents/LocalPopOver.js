@@ -63,7 +63,7 @@ const LocalPopOver = props => {
       visible={click}
       onVisibleChange={handleClick}
     >
-      <img src={orangemarker} alt="map marker" className="marker"></img>
+      <img data-cy={`map-marker-${props.index}`} src={orangemarker} alt="map marker" className="marker"></img>
     </Popover>
   );
 };

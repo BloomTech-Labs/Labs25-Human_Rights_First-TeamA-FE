@@ -43,13 +43,14 @@ const Map = () => {
   // Create markers for map
   let createMarkers;
   if (incidents.length > 0) {
-    createMarkers = incidents.map(incident => {
+    createMarkers = incidents.map((incident, index) => {
       return (
         <LocalPopOver
           key={`popover-${incident.id}`}
           lat={incident.geocoding.lat}
           lng={incident.geocoding.long}
           incident={incident}
+          index={index}
           marker={true}
           text={false}
         />
