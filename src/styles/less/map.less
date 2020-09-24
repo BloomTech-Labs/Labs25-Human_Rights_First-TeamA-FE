@@ -5,21 +5,22 @@
   width: 100%;
   position: relative;
 }
+
 .autocomplete-search {
   color: @black;
   position: absolute;
   display: flex;
   top: 5%;
-  left: 2%;
   justify-content: center;
   width: 100%;
 
   @media @medium {
-    margin: 0 auto;
     justify-content: left;
     width: 100%;
   }
-
+  .ant-row {
+    margin: 0 2%;
+  }
   .ant-input {
     color: @black;
 
