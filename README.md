@@ -1,14 +1,14 @@
-# 1️⃣ Human Rights First - Police Incident Report
+# Human Rights First - Police Incident Report
 
-1️⃣ You can find the deployed project at [Police Use of Force Tracker](https://main.d1v0tq1dqbxod4.amplifyapp.com/home).
+You can find the deployed project at [Police Use of Force Tracker](https://a.humanrightsfirst.dev/).
 
-## 4️⃣ Contributors
+## Contributors
 
-|                                                       [Cole Wilkison](https://github.com/cwilkison)                                                       |                                                    [Gordon Caister](https://github.com/GordonCaister)                                                     |                                                      [Andrew Hoffman](https://github.com/ashoffman)                                                       |                                                       [Nathan Howland](https://github.com/NateyLB)                                                        |                                                          [Phil Fives](https://github.com/ph5500)                                                          |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [<img src="https://avatars1.githubusercontent.com/u/60902582?s=400&u=361d46cd844ed7362f12ccc3c1f9622d4a373f13&v=4" width = "200" />](https://github.com/) | [<img src="https://avatars3.githubusercontent.com/u/41546522?s=400&u=64e9bef9293431008dabedfb150c956495b6b6d2&v=4" width = "200" />](https://github.com/) | [<img src="https://avatars0.githubusercontent.com/u/46906462?s=400&u=f541fc637d418ecda1c5d924d4bff009a0c7c5af&v=4" width = "200" />](https://github.com/) | [<img src="https://avatars0.githubusercontent.com/u/38302941?s=400&u=3b7e89f5287acbf4ba469f7a2625f3bc4a58927f&v=4" width = "200" />](https://github.com/) | [<img src="https://avatars1.githubusercontent.com/u/60459707?s=400&u=4c7df9fb20aa4f17da036fa1149ef114edfa06e4&v=4" width = "200" />](https://github.com/) |
-|                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/cwilkison)                                   |                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/gordoncaister)                                 |                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ashoffman)                                   |                                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NateyLB)                                    |                                    [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ph5500)                                    |
-|              [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/cole-wilkison/)               |              [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gordoncaister/)               |               [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/ashoffmann90/)               |         [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/nathan-howland-3611241a6/)         |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/n/phil-fives/)                 |
+|                                                       [Cole Wilkison](https://github.com/cwilkison)                                                       |                                                    [Gordon Caister](https://github.com/GordonCaister)                                                     |                                                    [Andrew Hoffmann](https://github.com/ashoffmann90)                                                     |                                                       [Nathan Howland](https://github.com/NateyLB)                                                        |                                                          [Phil Fives](https://github.com/ph5500)                                                          |                                                       [Brannan Conrad](https://github.com/BrannanC)                                                       |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://avatars1.githubusercontent.com/u/60902582?s=400&u=361d46cd844ed7362f12ccc3c1f9622d4a373f13&v=4" width = "200" />](https://github.com/) | [<img src="https://avatars3.githubusercontent.com/u/41546522?s=400&u=64e9bef9293431008dabedfb150c956495b6b6d2&v=4" width = "200" />](https://github.com/) | [<img src="https://avatars0.githubusercontent.com/u/46906462?s=400&u=f541fc637d418ecda1c5d924d4bff009a0c7c5af&v=4" width = "200" />](https://github.com/) | [<img src="https://avatars0.githubusercontent.com/u/38302941?s=400&u=3b7e89f5287acbf4ba469f7a2625f3bc4a58927f&v=4" width = "200" />](https://github.com/) | [<img src="https://avatars1.githubusercontent.com/u/60459707?s=400&u=4c7df9fb20aa4f17da036fa1149ef114edfa06e4&v=4" width = "200" />](https://github.com/) | [<img src="https://avatars2.githubusercontent.com/u/39506884?s=400&u=1c20856dbf147e53e7b413fee1c9a22ff3453952&v=4" width = "200" />](https://github.com/) |
+|                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/cwilkison)                                   |                                [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/gordoncaister)                                 |                                  [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ashoffman)                                   |                                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NateyLB)                                    |                                    [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/ph5500)                                    |                                   [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/BrannanC)                                   |
+|              [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/cole-wilkison/)               |              [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/gordoncaister/)               |               [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/ashoffmann90/)               |         [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/nathan-howland-3611241a6/)         |                [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/n/phil-fives/)                 |         [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/brannan-conrad-18852616b/)         |
 
 <br>
 <br>
@@ -16,26 +16,28 @@
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![React](https://img.shields.io/badge/react-v16.7.0--alpha.2-blue.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Ant Design](https://img.shields.io/badge/design%20system-ant--design-yellowgreen)](https://ant.design/docs/react/introduce)
+[![ESLint](https://img.shields.io/badge/linter-eslint-orange)](https://eslint.org/)
 
 ## Project Overview
 
-1️⃣ [Trello Board](https://trello.com/b/f5IBtPhV/labs25hrfbrannan)
+[Trello Board](https://trello.com/b/f5IBtPhV/labs25hrfbrannan)
 
-1️⃣ [Product Canvas](https://whimsical.com/4Gg7cNjtFfmcAXKDpRu8oJ)
+[Product Canvas](https://whimsical.com/4Gg7cNjtFfmcAXKDpRu8oJ)
 
 Single page application that maps police brutality based on scraping data from Twitter and Reddit. It includes a timeline view, visual
 map and feed page. Intended for journalists, activists and lawyers.
 
-### 4️⃣ Key Features
+### Key Features
 
 - Interactive Map
 - Timeline
 - Feed page
 - Search Function
 
-## 1️⃣ Tech Stack
+## Tech Stack
 
-### Front end built using:
+### [Front end](https://github.com/Lambda-School-Labs/Labs25-Human_Rights_First-TeamA-FE) built using:
 
 #### React
 
@@ -46,10 +48,15 @@ map and feed page. Intended for journalists, activists and lawyers.
 - Ant Design
 - React-Google-Map
 - craco-less
+- react-places-autocomplete
+- react-loader-spinner
+- react-twitter-embed
 
 #### Front end deployed to AWS Amplify
 
-#### [Back end] https://github.com/Lambda-School-Labs/Labs25-Human_Rights_First-TeamA-BE built using:
+<br>
+
+#### [Back end](https://github.com/Lambda-School-Labs/Labs25-Human_Rights_First-TeamA-BE) built using:
 
 #### Node
 
@@ -65,23 +72,33 @@ map and feed page. Intended for journalists, activists and lawyers.
 
 # APIs
 
-## 2️⃣ Okta Authentication
+## Okta Authentication
 
 The Okta Authentication API provides operations to authenticate users, perform multifactor enrollment and verification, recover forgotten passwords, and unlock accounts. Primary authentication allows you to verify username and password credentials for a user.
 
-## 3️⃣ Google Maps API
+## Google Maps API
 
 Allows building of customized, agile experiences that bring the real world to our users with static and dynamic maps, Street View imagery, and 360° views.
+This map uses the google-map-react library which is built on the Google Maps API.
 
-## 3️⃣ Back-End API
+- https://github.com/google-map-react/google-map-react#use-google-maps-api
+- Requires Google Maps API key including: "Places", "Geocoding", "Maps" and "JavaScript" apis.
+- Subscription to apis is available through the Google Maps Api api key dashboard.
+- https://developers.google.com/maps/documentation/javascript/get-api-key
+
+## Back-End API
 
 Allows for access of locations of police incidents and details.
+<br>
+https://labs25-hrf-teama-api.herokuapp.com/
 
-## 3️⃣ Data Science API
+## Data Science API
 
 Data Science scrapes data from Twitter and Reddit which compiles and cleans that information for the Web Developers.
+<br>
+http://human-rights-considered.eba-api7kmju.us-east-1.elasticbeanstalk.com/
 
-# 3️⃣ Environment Variables
+# Environment Variables
 
 In order for the app to function correctly, the user must set up their own environment variables. There should be a .env file containing the following:
 
@@ -96,20 +113,20 @@ In order for the app to function correctly, the user must set up their own envir
     *  REACT_APP_API_URI - API URL for back end API
     *  REACT_APP_GOOGLE_MAPS_API_KEY - Google Maps API key
 
-# 5️⃣ Content Licenses
+# Content Licenses
 
 | Image Filename | Source / Creator | License                                                                      |
 | -------------- | ---------------- | ---------------------------------------------------------------------------- |
 | doodles.png    | Nicole Bennett   | [Creative Commons](https://www.toptal.com/designers/subtlepatterns/doodles/) |
 | rings.svg      | Sam Herbert      | [MIT](https://github.com/SamHerbert/SVG-Loaders)                             |
 
-# 4️⃣ Testing
+# Testing
 
 - SuperTest
 - Jest
 - Cypress
 
-# 4️⃣ Installation Instructions
+# Installation Instructions
 
 - Navigate to the root directory with this README in it.
 - Using NPM: npm install

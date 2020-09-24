@@ -7,7 +7,6 @@ export const axiosBase = () => {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
-    // baseURL: 'http://localhost:8000/'
     baseURL: 'https://labs25-hrf-teama-api.herokuapp.com',
   });
 };
