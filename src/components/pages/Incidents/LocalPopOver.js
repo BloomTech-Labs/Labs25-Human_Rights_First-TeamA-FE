@@ -58,7 +58,8 @@ const LocalPopOver = props => {
           <div>{props.incident.title}</div> <div>{formatDate}</div>
         </div>
       }
-      trigger="click"
+      trigger={['click']}
+      overlay={'menu'}
       visible={click}
       onVisibleChange={handleClick}
     >

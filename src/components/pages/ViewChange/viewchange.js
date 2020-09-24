@@ -35,7 +35,7 @@ const ViewChange = props => {
   return (
     <>
       <div id="viewchangeparent">
-        <Dropdown overlay={menu} placement="topLeft">
+        <Dropdown overlay={menu} trigger={['click']} placement="topLeft">
           <Button
             className={
               window.location.href.includes('/timeline')
