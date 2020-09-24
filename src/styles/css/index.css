@@ -267,6 +267,10 @@ table {
   font-size: 1.1rem;
   letter-spacing: 0.5px;
 }
+#timeline .ant-timeline-item-content {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
 @media (min-width: 992px) {
   #timeline {
     padding: 2%;
